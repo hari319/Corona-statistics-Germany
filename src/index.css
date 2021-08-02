@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 8px;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+  border-color: #93F100 !important;
+}
+
+.MuiInput-underline::after,
+.MuiInput-underline:hover:not(.Mui-disabled)::before {
+  border-bottom: 2px solid #93F100 !important;
+}
+
+.MuiButton-containedPrimary {
+  color: black !important;
+  background-color: #93F100 !important;
+}
+
+.MuiButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.RoomContainer{
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.container {  
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.selectTag{
+  text-align: center
+}
+
+.makeStyles-avatar-22,
+.makeStyles-avatar-12,
+.MuiPickersToolbar-toolbar,
+.MuiPickersDay-daySelected,
+.MuiPickersClock-pin,
+.MuiPickersClockPointer-pointer,
+.button1,
+.button2,
+.button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-fullWidth
+ { 
+  background-color: #93F100 !important;
+}
+
+.MuiButton-textPrimary,
+.MuiFormLabel-root.Mui-focused{
+  color: #93F100 !important;
+}
+
+.MuiPickersClockPointer-thumb{
+  border: 14px solid #93F100 !important;
+}
+
+.MuiAvatar-colorDefault {
+  color: black;
+}

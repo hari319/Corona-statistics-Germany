@@ -1,0 +1,35 @@
+.container {
+  margin: 50px 0;
+}
+
+.card {
+  margin: 0 2% !important;
+  color: var(--color-font) !important;
+  border-radius: 16px;
+}
+
+.innerCard {
+  text-align: center;
+}
+
+.Confirmed {
+  background-color: #ff073a !important;
+}
+
+.Recovered {
+  background-color: #28a745 !important;
+}
+
+.Deaths {
+  background-color: #6c757d !important;
+}
+
+p {
+  color: var(--color-light);
+}
+
+@media (max-width: 770px) {
+  .card {
+    margin: 2% 0 !important;
+  }
+}

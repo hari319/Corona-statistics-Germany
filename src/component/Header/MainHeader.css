@@ -1,0 +1,25 @@
+.root {
+  flex-grow: 1;
+}
+
+.toolbar {
+  background-color: #93f100;
+}
+
+.header-div {
+  padding: 20px;
+  display: table;
+  margin: 0 auto;
+}
+
+.header-img {
+  vertical-align: middle;
+  display: table-cell;
+  margin-right: 1em;
+}
+
+h1 {
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 12px;
+}
