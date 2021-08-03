@@ -18,7 +18,7 @@ import {
 import { Context } from "../Context";
 
 interface Column {
-  id: "date" | "cases" | "recovered" | "deaths";
+  id: "state" | "date" | "cases" | "recovered" | "deaths";
   label: string;
   minWidth?: number;
   align?: "right";
@@ -26,18 +26,19 @@ interface Column {
 }
 
 const columns: Column[] = [
+  { id: "state", label: "State", minWidth: 170 },
   { id: "date", label: "Date", minWidth: 170 },
   { id: "cases", label: "Cases", minWidth: 100 },
   {
     id: "recovered",
     label: "Recovered",
-    minWidth: 170,
+    minWidth: 100,
     align: "right",
   },
   {
     id: "deaths",
     label: "Deaths",
-    minWidth: 170,
+    minWidth: 100,
     align: "right",
   },
 ];
@@ -47,21 +48,24 @@ interface Data {
   cases: number;
   recovered: number;
   deaths: number;
+  state: string;
 }
 
 function createData(
-  date: any,
+  date: Date,
   cases: number,
   recovered: number,
-  deaths: number
+  deaths: number,
+  state: string
 ): Data {
-  return { date, cases, recovered, deaths };
+  return { date, cases, recovered, deaths, state };
 }
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    marginTop: 20,
+    marginTop: 30,
+    marginBottom: 30,
   },
   container: {
     maxHeight: 440,
@@ -92,7 +96,7 @@ const StyledTableRow = withStyles((theme: Theme) =>
 )(TableRow);
 
 const TableView = () => {
-  const { tableData } = useContext(Context);
+  const { tableData, selectedState } = useContext(Context);
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -100,32 +104,34 @@ const TableView = () => {
 
   useEffect(() => {
     setRows([]);
-    if (Array.isArray(tableData)) {
-      console.log(tableData);
-      tableData.forEach((e) => {
+    if (tableData) {
+      if (Array.isArray(tableData)) {
+        tableData.forEach((e) => {
+          setRows((row) => [
+            ...row,
+            createData(e.date, e.cases, e.recovered, e.deaths, e.state),
+          ]);
+        });
+      } else {
+        let newTableData: any = tableData;
+        var today: any = new Date().toLocaleDateString("de-DE", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        });
         setRows((row) => [
           ...row,
-          createData(e.date, e.cases, e.recovered, e.deaths),
+          createData(
+            today,
+            newTableData.cases,
+            newTableData.recovered,
+            newTableData.deaths,
+            newTableData.name
+          ),
         ]);
-      });
-    } else {
-      let newTableData: any = tableData;
-      var today = new Date().toLocaleDateString("de-DE", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      });
-      setRows((row) => [
-        ...row,
-        createData(
-          today,
-          newTableData.cases,
-          newTableData.recovered,
-          newTableData.deaths
-        ),
-      ]);
+      }
     }
-  }, [tableData]);
+  }, [selectedState, tableData]);
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -140,6 +146,7 @@ const TableView = () => {
 
   return rows.length > 0 ? (
     <Paper className={classes.root}>
+      <h1>COVID-19 Tracker List </h1>
       <TableContainer className={classes.container}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>

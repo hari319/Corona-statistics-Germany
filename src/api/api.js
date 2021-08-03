@@ -1,6 +1,4 @@
 /* eslint-disable no-throw-literal */
-import _ from "lodash"
-
 const url = "https://api.corona-zahlen.org";
 const options = {
   year: 'numeric',
@@ -17,7 +15,7 @@ const fetchDataGermany = async() => {
   ).then((response) => {
     if (response.status === 200) {
       return response.json()
-			} else {
+    } else {
       throw {
         name: "ResponseError",
         message: "GET Request returned not okay",
@@ -25,13 +23,11 @@ const fetchDataGermany = async() => {
           return this.name + ": " + this.message;
         }
       };
-			}
-    }).catch((error) => {
-      console.error(error);
+		}
+  }).catch((error) => {
 			if (error.toString().indexOf("429") !== -1) {
 				return { error: { message: "Please take a break! You only have a limited amount of API calls!" } };
 			}
-
     });
 
   return fetchPromise;
@@ -48,7 +44,43 @@ const fetchDataStateALL= async(state) => {
     .catch((error) => {
       throw new Error('FETCH ERROR:', error);
     });
-  return fetchPromise.data[state]
+  
+  if (fetchPromise.data) {
+    return fetchPromise.data[state]
+  } else {
+    alert("No Data was returned!. Please retry later");
+  }
+}
+
+const fetchDataAllState = async () => {
+  const fetchPromise = await fetch(`${url}/state`, {
+    method: 'GET',
+  }).then((response) => {
+    if (response.ok) {
+        return response.json();
+    }
+    })
+    .catch((error) => {
+      throw new Error('FETCH ERROR:', error);
+    });
+  
+  let finalResponse = []
+  if (fetchPromise) {
+      for (const property in fetchPromise.data) {
+        let res = fetchPromise.data[property]
+        finalResponse.push({
+          state: res.name,
+          date:new Date().toLocaleDateString("de-DE", options),
+          cases: res.cases,
+          recovered: res.recovered,
+          deaths:res.deaths
+        })
+      }
+    return finalResponse
+  } else {
+     alert("No Data was returned!. Please retry later");
+  }
+  
 }
 
 const fetchDataStatePerWeek = async (state, weeks) => {
@@ -84,20 +116,25 @@ const fetchDataStatePerWeek = async (state, weeks) => {
   
   const finalResponse = [];
 
-  for (let index = cases.data[state].history.length; index > 0; --index) {
-    finalResponse.push({
-      cases: cases.data[state].history[index -1].cases,
-      recovered: recovered.data[state].history[index -1].recovered,
-      deaths: deaths.data[state].history[index- 1].deaths,
-      date: new Date(cases.data[state].history[index- 1].date).toLocaleDateString("de-DE", options)
-    });
+  if (cases.data.length > 0  && recovered.data.length > 0 && deaths.data.length > 0) {  
+    for (let index = cases.data[state].history.length; index > 0; --index) {
+      finalResponse.push({
+        cases: cases.data[state].history[index -1].cases,
+        recovered: recovered.data[state].history[index -1].recovered,
+        deaths: deaths.data[state].history[index- 1].deaths,
+        date: new Date(cases.data[state].history[index - 1].date).toLocaleDateString("de-DE", options),
+        state:cases.data[state].name,
+      });
+    }
+    return finalResponse
+  } else {
+     alert("No Data was returned!. Please retry later");
   }
-
-  return finalResponse
 }
 
 export {
   fetchDataGermany,
   fetchDataStateALL,
-  fetchDataStatePerWeek
+  fetchDataStatePerWeek,
+  fetchDataAllState
 }

@@ -4,8 +4,8 @@ import Backend from "i18next-xhr-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import translationEN from "../../public/assests/locales/en/translation.json";
 import translationDE from "../../public/assests/locales/de/translation.json";
-const fallbackLng: any = ["en"];
-const availableLanguages: any = ["en", "de"];
+const fallbackLng: string[] = ["en"];
+const availableLanguages: string[] = ["en", "de"];
 
 const resources = {
   en: {

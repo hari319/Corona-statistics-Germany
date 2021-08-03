@@ -1,4 +1,7 @@
-[
+[	{
+		"name": "Germany",
+		"code": "all"
+	},
 	{
 		"name": "Baden-Württemberg",
 		"code": "BW"

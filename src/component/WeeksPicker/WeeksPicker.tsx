@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const WeeksPicker = () => {
   const classes = useStyles();
-  const { weeks, setWeeks } = useContext(Context);
+  const { selectedState, weeks, setWeeks } = useContext(Context);
+  let disable = selectedState && selectedState.code === "all" ? true : false;
 
   return (
     <>
@@ -24,17 +25,25 @@ const WeeksPicker = () => {
           labelId="select"
           id="select"
           value={weeks}
-          onChange={(event) => setWeeks(event.target.value as number)}
+          onChange={(event) => setWeeks(event.target.value as string)}
           label="Select a Weeks"
         >
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={0}>All</MenuItem>
-          <MenuItem value={7}>1 week</MenuItem>
-          <MenuItem value={14}>2 Weeks</MenuItem>
-          <MenuItem value={21}>3 weeks</MenuItem>
-          <MenuItem value={28}>4 weeks</MenuItem>
+          <MenuItem value={7} disabled={disable}>
+            1 week
+          </MenuItem>
+          <MenuItem value={14} disabled={disable}>
+            2 Weeks
+          </MenuItem>
+          <MenuItem value={21} disabled={disable}>
+            3 weeks
+          </MenuItem>
+          <MenuItem value={28} disabled={disable}>
+            4 weeks
+          </MenuItem>
         </Select>
       </FormControl>
     </>
