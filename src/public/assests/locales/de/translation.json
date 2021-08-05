@@ -1,7 +1,18 @@
-{  
-  "Date": "Datum",
+{
+  "DATE": "Datum",
   "ADD": "Hinzufügen",
-  "EDIT": "Bearbeiten", 
-  "SELECT": "Auswählen",
-  "STATECHOSSE": "Choose a state"
+  "STATE": "Bundesland",
+  "DISTRICTS": "Landkreise",
+  "CASES": "Fälle",
+  "STATECHOSSE": "Wählen Sie ein Bundesland",
+  "HEADER": "COVID-19",
+  "CONFIRM": "Infektionen",
+  "RECOVERED": "Genesen",
+  "DEATHS": "Todesfälle",
+  "CHARTTAG": "Karten Projektion",
+  "LOADING": "Wird geladen ...! Bitte Warten!",
+  "TABLETAG": "COVID-19 Tracker Liste",
+  "WEEKS": "Wählen Sie eine Woche",
+  "ALERT": "Es wurden keine Daten zurückgegeben!. Bitte versuchen Sie es später erneut.",
+  "CORONACARD": "CORONA-Tracker für Deutschland"
 }

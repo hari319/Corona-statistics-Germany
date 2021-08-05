@@ -10,9 +10,10 @@ import './App.css';
 const App = () => {
   const { data } = useContext(Context);
   return (
-    <Suspense fallback="...">
+    <Suspense fallback={'loading...'}>
       <ContextProvider>
-        {data.length > 0 ? (
+        {/* {data.length > 0 ? ( */}
+        {data ? (
           <>
             <MainHeader />
             <div className={'Lang'}>

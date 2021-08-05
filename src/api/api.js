@@ -1,5 +1,6 @@
 /* eslint-disable no-throw-literal */
-const url = "https://api.corona-zahlen.org";
+
+const URL = "https://api.corona-zahlen.org";
 const options = {
   year: 'numeric',
   month: '2-digit',
@@ -8,7 +9,7 @@ const options = {
 
 const fetchDataGermany = async() => {
   const fetchPromise = await fetch(
-    `${url}/germany`,
+    `${URL}/germany`,
     {
       method: 'GET',
     }
@@ -34,10 +35,10 @@ const fetchDataGermany = async() => {
 }
 
 const fetchDataStateALL= async(state) => {  
-  const fetchPromise = await fetch(`${url}/states/${state}`, {
+  const fetchPromise = await fetch(`${URL}/states/${state}`, {
     method: 'GET',
   }).then((response) => {
-    if (response.ok) {
+      if (response.ok) {
         return response.json();
       }
     })
@@ -45,26 +46,27 @@ const fetchDataStateALL= async(state) => {
       throw new Error('FETCH ERROR:', error);
     });
   
-  if (fetchPromise.data) {
+  if (fetchPromise && fetchPromise.data) {
     return fetchPromise.data[state]
   } else {
-    alert("No Data was returned!. Please retry later");
+    AlertNotification();
   }
 }
 
 const fetchDataAllState = async () => {
-  const fetchPromise = await fetch(`${url}/state`, {
+  const fetchPromise = await fetch(`${URL}/states`, {
     method: 'GET',
   }).then((response) => {
-    if (response.ok) {
-        return response.json();
-    }
+      if (response.ok) {
+          return response.json();
+      }
     })
     .catch((error) => {
       throw new Error('FETCH ERROR:', error);
     });
   
   let finalResponse = []
+
   if (fetchPromise) {
       for (const property in fetchPromise.data) {
         let res = fetchPromise.data[property]
@@ -78,23 +80,22 @@ const fetchDataAllState = async () => {
       }
     return finalResponse
   } else {
-     alert("No Data was returned!. Please retry later");
-  }
-  
+     AlertNotification();
+  }  
 }
 
 const fetchDataStatePerWeek = async (state, weeks) => {
-  let cases = await fetch(`${url}/states/${state}/history/cases/${weeks}`, {
+  let cases = await fetch(`${URL}/states/${state}/history/cases/${weeks}`, {
     method: 'GET',
   }).then(async (response) => {
       if (response.ok) {
           return await response.json();
-      } 
+      }
     }).catch((error) => {
       throw new Error('FETCH ERROR:', error);
     });
   
-  let recovered= await fetch(`${url}/states/${state}/history/recovered/${weeks}`, {
+  let recovered= await fetch(`${URL}/states/${state}/history/recovered/${weeks}`, {
     method: 'GET',
   }).then((response) => {
       if (response.ok) {
@@ -104,7 +105,7 @@ const fetchDataStatePerWeek = async (state, weeks) => {
       throw new Error('FETCH ERROR:', error);
     });
   
-  let deaths= await fetch(`${url}/states/${state}/history/deaths/${weeks}`, {
+  let deaths= await fetch(`${URL}/states/${state}/history/deaths/${weeks}`, {
     method: 'GET',
   }).then((response) => {
       if (response.ok) {
@@ -116,7 +117,7 @@ const fetchDataStatePerWeek = async (state, weeks) => {
   
   const finalResponse = [];
 
-  if (cases.data.length > 0  && recovered.data.length > 0 && deaths.data.length > 0) {  
+  if (emptyCheck(cases.data[state])  && emptyCheck(recovered.data[state]) && emptyCheck(deaths.data[state])) {  
     for (let index = cases.data[state].history.length; index > 0; --index) {
       finalResponse.push({
         cases: cases.data[state].history[index -1].cases,
@@ -128,13 +129,66 @@ const fetchDataStatePerWeek = async (state, weeks) => {
     }
     return finalResponse
   } else {
-     alert("No Data was returned!. Please retry later");
+     AlertNotification();
   }
+}
+
+const fetchDataAllDistricts = async () => {
+  const fetchPromise = await fetch(`${URL}/districts`, {
+    method: 'GET',
+  }).then((response) => {
+      if (response.ok) {
+          return response.json();
+      }
+    })
+    .catch((error) => {
+      throw new Error('FETCH ERROR:', error);
+    });
+  
+  let finalResponse = []
+
+  if (emptyCheck(fetchPromise.data)) {
+    for (const property in fetchPromise.data) {
+      let res = fetchPromise.data[property]
+      let response = {
+        districts: res.name,
+        date:new Date().toLocaleDateString("de-DE", options),
+        cases: res.cases,
+        recovered: res.recovered,
+        deaths:res.deaths
+      }
+
+      if (finalResponse.length > 0 && finalResponse.some(obj => Object.keys(obj).includes(res.state))) {
+        finalResponse.forEach((e, i) => {
+          if (Object.keys(e).includes(res.state)) {            
+            finalResponse[i][res.state].push(response)
+          }
+        })
+        
+      } else {
+        finalResponse.push({
+          [res.state]: [response]
+        },)
+      }
+    }
+    return finalResponse
+  } else {
+     AlertNotification();
+  }  
+}
+
+const emptyCheck = (e) => {
+  return e && Object.keys(e).length > 0
+}
+
+const AlertNotification = () => {
+  alert("No Data was returned!. Please retry later");
 }
 
 export {
   fetchDataGermany,
   fetchDataStateALL,
   fetchDataStatePerWeek,
-  fetchDataAllState
+  fetchDataAllState,
+  fetchDataAllDistricts
 }

@@ -28,6 +28,14 @@ p {
   color: var(--color-light);
 }
 
+.h1 {
+  display: flex !important;
+  padding: 30px !important;
+  margin-top: -45px !important;
+  color: black !important;
+  justify-content: center;
+}
+
 @media (max-width: 770px) {
   .card {
     margin: 2% 0 !important;

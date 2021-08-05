@@ -1,137 +1,73 @@
-import React, { useContext, useEffect } from "react";
-import {
-  withStyles,
-  Theme,
-  createStyles,
-  makeStyles,
-} from "@material-ui/core/styles";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Table,
   TableHead,
   TableBody,
   TableRow,
-  TableCell,
   Paper,
   TableContainer,
   TablePagination,
-} from "@material-ui/core";
-import { Context } from "../Context";
+} from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
+import { StateData } from '../Context';
+import { StyledTableRow, StyledTableCell, getImage } from './HelperComponent';
 
 interface Column {
-  id: "state" | "date" | "cases" | "recovered" | "deaths";
+  id: 'state' | 'date' | 'cases' | 'recovered' | 'deaths';
   label: string;
   minWidth?: number;
-  align?: "right";
+  align?: 'right';
   format?: (value: number) => string;
-}
-
-const columns: Column[] = [
-  { id: "state", label: "State", minWidth: 170 },
-  { id: "date", label: "Date", minWidth: 170 },
-  { id: "cases", label: "Cases", minWidth: 100 },
-  {
-    id: "recovered",
-    label: "Recovered",
-    minWidth: 100,
-    align: "right",
-  },
-  {
-    id: "deaths",
-    label: "Deaths",
-    minWidth: 100,
-    align: "right",
-  },
-];
-
-interface Data {
-  date: Date;
-  cases: number;
-  recovered: number;
-  deaths: number;
-  state: string;
-}
-
-function createData(
-  date: Date,
-  cases: number,
-  recovered: number,
-  deaths: number,
-  state: string
-): Data {
-  return { date, cases, recovered, deaths, state };
 }
 
 const useStyles = makeStyles({
   root: {
-    width: "100%",
+    width: '100%',
     marginTop: 30,
     marginBottom: 30,
   },
   container: {
     maxHeight: 440,
   },
+  h1: {
+    textAlign: 'center',
+  },
 });
 
-const StyledTableCell = withStyles((theme: Theme) =>
-  createStyles({
-    head: {
-      backgroundColor: "#93F100",
-      color: "#000000",
-      fontWeight: "bold",
-    },
-    body: {
-      fontSize: 14,
-    },
-  })
-)(TableCell);
+interface TableViewProps {
+  rows: StateData[];
+  type: string;
+}
 
-const StyledTableRow = withStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      "&:nth-of-type(odd)": {
-        backgroundColor: theme.palette.action.hover,
-      },
-    },
-  })
-)(TableRow);
-
-const TableView = () => {
-  const { tableData, selectedState } = useContext(Context);
+const TableView: React.FC<TableViewProps> = ({ rows, type }) => {
+  const { t } = useTranslation();
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [rows, setRows] = React.useState<Data[]>([]);
+  const typeBool: boolean = type === 'state';
 
-  useEffect(() => {
-    setRows([]);
-    if (tableData) {
-      if (Array.isArray(tableData)) {
-        tableData.forEach((e) => {
-          setRows((row) => [
-            ...row,
-            createData(e.date, e.cases, e.recovered, e.deaths, e.state),
-          ]);
-        });
-      } else {
-        let newTableData: any = tableData;
-        var today: any = new Date().toLocaleDateString("de-DE", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        });
-        setRows((row) => [
-          ...row,
-          createData(
-            today,
-            newTableData.cases,
-            newTableData.recovered,
-            newTableData.deaths,
-            newTableData.name
-          ),
-        ]);
-      }
-    }
-  }, [selectedState, tableData]);
+  const columns: Column[] = [
+    {
+      id: 'state',
+      label: typeBool ? t('STATE') : t('DISTRICTS'),
+      minWidth: 170,
+    },
+    { id: 'date', label: t('DATE'), minWidth: 100 },
+    { id: 'cases', label: t('CASES'), minWidth: 100 },
+    {
+      id: 'recovered',
+      label: t('RECOVERED'),
+      minWidth: 100,
+      align: 'right',
+    },
+    {
+      id: 'deaths',
+      label: t('DEATHS'),
+      minWidth: 100,
+      align: 'right',
+    },
+  ];
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -146,7 +82,7 @@ const TableView = () => {
 
   return rows.length > 0 ? (
     <Paper className={classes.root}>
-      <h1>COVID-19 Tracker List </h1>
+      <h1 className={classes.h1}>{t('TABLETAG')}</h1>
       <TableContainer className={classes.container}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
@@ -154,7 +90,7 @@ const TableView = () => {
               {columns.map((column) => (
                 <StyledTableCell
                   key={column.id}
-                  align={"center"}
+                  align={'center'}
                   style={{ minWidth: column.minWidth }}
                 >
                   {column.label}
@@ -165,14 +101,19 @@ const TableView = () => {
           <TableBody>
             {rows
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row, i) => {
+              .map((row: any, i) => {
                 return (
                   <StyledTableRow hover role="checkbox" tabIndex={-1} key={i}>
-                    {columns.map((column) => {
-                      const value = row[column.id];
+                    {columns.map((column: any, index: number) => {
+                      const value = row[index === 0 ? 'districts' : column.id];
                       return (
-                        <StyledTableCell key={column.id} align={"center"}>
-                          {column.format && typeof value === "number"
+                        <StyledTableCell key={column.id} align={'center'}>
+                          {column.id === 'state' &&
+                            getImage(
+                              row[typeBool ? 'state' : 'districts'],
+                              type
+                            )}
+                          {column.format && typeof value === 'number'
                             ? column.format(value)
                             : value}
                         </StyledTableCell>

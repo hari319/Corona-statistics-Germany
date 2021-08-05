@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useContext } from "react";
-import { Bar } from "react-chartjs-2";
-import { Context, TableData } from "../Context";
-import "./Chart.css";
+import React, { useEffect, useState, useContext } from 'react';
+import { Bar } from 'react-chartjs-2';
+import { useTranslation } from 'react-i18next';
+import { Context, StateData } from '../Context';
+import './Chart.css';
 
 const Chart = () => {
-  const { selectedState, tableData } = useContext(Context);
+  const { t } = useTranslation();
+  const { selectedState, stateData } = useContext(Context);
   const [Cases, setCases] = useState<number[]>([]);
   const [Label, setLabel] = useState<string | Date[]>([]);
   const [Deaths, setDeaths] = useState<number[]>([]);
@@ -12,39 +14,40 @@ const Chart = () => {
   const value: number = 7;
 
   useEffect(() => {
-    tableData &&
-      tableData.forEach((e: TableData) => {
+    stateData &&
+      stateData.length > 0 &&
+      stateData.forEach((e: StateData) => {
         setLabel((label: any) => [
           ...label,
-          selectedState.code === "all" ? e.state : e.date,
+          selectedState.code === 'all' ? e.state : e.date,
         ]);
         setCases((cases: number[]) => [...cases, e.cases]);
         setDeaths((deaths: number[]) => [...deaths, e.deaths]);
         setRecovered((recovered: number[]) => [...recovered, e.recovered]);
       });
-  }, [tableData, selectedState]);
+  }, [stateData, selectedState]);
 
   const ChartData = {
     labels: Label.slice(-value),
 
-    type: "polarArea",
+    type: 'polarArea',
     datasets: [
       {
         data: Cases.slice(-value),
-        backgroundColor: "#ff3333",
-        label: "Cases",
+        backgroundColor: '#ff3333',
+        label: t('CASES'),
       },
 
       {
         data: Recovered.slice(-value),
-        backgroundColor: "#008000",
-        label: "Recovered",
+        backgroundColor: '#008000',
+        label: t('RECOVERED'),
       },
 
       {
         data: Deaths.slice(-value),
-        backgroundColor: "#000000",
-        label: "Deaths",
+        backgroundColor: '#000000',
+        label: t('DEATHS'),
       },
     ],
   };
@@ -54,9 +57,9 @@ const Chart = () => {
     datetainAspectRatio: false,
   };
 
-  return tableData && tableData.length > 0 ? (
-    <div className={"Chart"}>
-      <h1>Chart Projection </h1>
+  return stateData && stateData.length > 0 ? (
+    <div className={'Chart'}>
+      <h1 className={'h1'}>{t('CHARTTAG')}</h1>
       <Bar data={ChartData} options={chartOptions}></Bar>
     </div>
   ) : (

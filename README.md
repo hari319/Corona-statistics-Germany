@@ -5,8 +5,10 @@
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=webpage&up_color=bright-green&up_message=online&url=https%3A%2F%2Ftim0-12432.github.io%2Fcorona-tracker)
 
 ### Fair Use
+
 - Data from [Robert Koch-Institut](https://www.rki.de/DE/Content/Infekt/SurvStat/survstat_node.html)
 - API made by [Marlon Lueckert](https://github.com/marlon360/rki-covid-api)
+- Collection of icons from icons8 [icons8](https://icons8.de/)
 
 ### Information
 

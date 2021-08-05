@@ -1,7 +1,18 @@
-{  
+{
   "DATE": "Date",
   "ADD": "Add",
-  "EDIT": "Edit",  
-  "SELECT": "SELECT",
-  "STATECHOSSE": "Choose a state"
+  "STATE": "State",
+  "DISTRICTS": "Districts",
+  "CASES": "Cases",
+  "STATECHOSSE": "Choose a state",
+  "HEADER": "COVID-19",
+  "CONFIRM": "Confirmed",
+  "RECOVERED": "Recovered",
+  "DEATHS": "Deaths",
+  "CHARTTAG": "Chart Projection",
+  "LOADING": "Loading ...! Please Wait!",
+  "TABLETAG": "COVID-19 Tracker List",
+  "WEEKS": "Select a Weeks",
+  "ALERT": "No Data was returned!. Please retry later.",
+  "CORONACARD": "CORONA-Tracker for Germany"
 }

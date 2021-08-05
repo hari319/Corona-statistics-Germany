@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import styles from './Loading.module.css';
 
 const Loading = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className={styles.loading}>
@@ -16,7 +18,7 @@ const Loading = () => {
           />
         </svg>
       </div>
-      <h1 className={styles.loadingPTag}>Loading ...! Please Wait !</h1>
+      <h1 className={styles.loadingPTag}>{t('LOADING')}</h1>
     </>
   );
 };

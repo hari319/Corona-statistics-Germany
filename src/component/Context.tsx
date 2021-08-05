@@ -1,16 +1,24 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { createContext, useState, FunctionComponent } from 'react';
 
-interface SelectedState {
+export interface SelectedState {
   name: string;
   code: string;
 }
-export interface TableData {
+export interface StateData {
   cases: number;
   recovered: number;
   deaths: number;
   date: Date;
   state: string;
+}
+
+export interface DistrictsData {
+  cases: number;
+  recovered: number;
+  deaths: number;
+  date: Date;
+  districts: string;
 }
 
 export interface Data {
@@ -24,23 +32,27 @@ export const Context = createContext<{
   setSelectedState: (value: SelectedState) => void;
   setWeeks: (value: string) => void;
   setData: (value: Data[]) => void;
-  setTableData: (value: TableData[]) => void;
+  setStateData: (value: StateData[]) => void;
+  setDistrictsData: (value: DistrictsData[]) => void;
   selectedState: SelectedState;
   weeks: string;
-  tableData: TableData[];
+  stateData: StateData[];
+  districtsData: DistrictsData[];
   data: Data[];
 }>({
   setSelectedState: () => {},
   setData: () => {},
   setWeeks: () => {},
-  setTableData: () => {},
+  setStateData: () => {},
+  setDistrictsData: () => {},
   selectedState: {
     name: '',
     code: '',
   },
   weeks: '',
   data: [],
-  tableData: [],
+  stateData: [],
+  districtsData: [],
 });
 
 const ContextProvider: FunctionComponent<any> = ({ children }) => {
@@ -53,18 +65,21 @@ const Auth = () => {
     name: '',
     code: '',
   });
-  const [tableData, setTableData] = useState<TableData[]>([]);
+  const [stateData, setStateData] = useState<StateData[]>([]);
+  const [districtsData, setDistrictsData] = useState<DistrictsData[]>([]);
   const [weeks, setWeeks] = useState<string>('');
 
   return {
     selectedState,
     weeks,
-    tableData,
+    stateData,
     data,
+    districtsData,
     setSelectedState,
     setData,
     setWeeks,
-    setTableData,
+    setStateData,
+    setDistrictsData,
   };
 };
 
