@@ -1,0 +1,14 @@
+.paper {
+  width: 100%;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  border: 1px solid greenyellow;
+}
+
+.container {
+  max-height: 440px;
+}
+
+.h1 {
+  text-align: center;
+}

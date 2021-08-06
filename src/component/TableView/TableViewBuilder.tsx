@@ -51,6 +51,7 @@ const FormBuilder = () => {
     name: '',
     code: '',
   });
+  const [countryPickerInput, setCountryPickerInput] = useState<string>();
   const [WeeksPicker, setWeeksPicker] = useState<string>('');
   let disable = countryPicker && countryPicker.code === 'all' ? true : false;
 
@@ -75,16 +76,18 @@ const FormBuilder = () => {
     setSelectedState(countryPicker);
     setCountryPicker({ name: '', code: '' });
     setWeeksPicker('');
+    setCountryPickerInput('');
   };
 
   return (
     <Grid container spacing={6} alignItems="center" justifyContent="center">
-      <Grid item xs={4}>
+      <Grid item xs={3}>
         <Autocomplete
+          value={countryPicker}
+          inputValue={countryPickerInput}
           id="country-picker"
           style={{ width: 300 }}
           options={GermanyJSON as Germany[]}
-          inputValue={countryPicker.name}
           classes={{
             option: classes.option,
           }}
@@ -96,20 +99,19 @@ const FormBuilder = () => {
             </React.Fragment>
           )}
           onChange={(e, value) => value && setCountryPicker(value)}
+          onInputChange={(event, value) => {
+            setCountryPickerInput(value);
+          }}
           renderInput={(params) => (
             <TextField
               {...params}
               label={t('STATECHOSSE')}
               variant="outlined"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: 'new-password',
-              }}
             />
           )}
         />
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={3}>
         <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel id="select-label">{t('WEEKS')}</InputLabel>
           <Select

@@ -1,31 +1,36 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useTranslation } from 'react-i18next';
-import { Context, StateData } from '../Context';
+import { Paper } from '@material-ui/core';
+import { Context } from '../Context';
 import './Chart.css';
 
-const Chart = () => {
+const Chart = (props: { chartData: any; type: string }) => {
+  const { chartData, type } = props;
   const { t } = useTranslation();
-  const { selectedState, stateData } = useContext(Context);
-  const [Cases, setCases] = useState<number[]>([]);
-  const [Label, setLabel] = useState<string | Date[]>([]);
-  const [Deaths, setDeaths] = useState<number[]>([]);
-  const [Recovered, setRecovered] = useState<number[]>([]);
+  const { selectedState } = useContext(Context);
+  let Cases: number[] = [];
+  let Label: any[] = [];
+  let Deaths: number[] = [];
+  let Recovered: number[] = [];
   const value: number = 7;
 
-  useEffect(() => {
-    stateData &&
-      stateData.length > 0 &&
-      stateData.forEach((e: StateData) => {
-        setLabel((label: any) => [
-          ...label,
-          selectedState.code === 'all' ? e.state : e.date,
-        ]);
-        setCases((cases: number[]) => [...cases, e.cases]);
-        setDeaths((deaths: number[]) => [...deaths, e.deaths]);
-        setRecovered((recovered: number[]) => [...recovered, e.recovered]);
-      });
-  }, [stateData, selectedState]);
+  function getLabel(e: any) {
+    switch (true) {
+      case type === 'state':
+        return e.state;
+      case type === 'districts':
+        return e.districts;
+    }
+  }
+
+  chartData.length > 0 &&
+    chartData.forEach((e: any) => {
+      Cases.push(e.cases);
+      Label.push(getLabel(e));
+      Deaths.push(e.deaths);
+      Recovered.push(e.recovered);
+    });
 
   const ChartData = {
     labels: Label.slice(-value),
@@ -57,11 +62,25 @@ const Chart = () => {
     datetainAspectRatio: false,
   };
 
-  return stateData && stateData.length > 0 ? (
-    <div className={'Chart'}>
-      <h1 className={'h1'}>{t('CHARTTAG')}</h1>
+  function getText() {
+    switch (true) {
+      case type === 'districts':
+        return t('DISTRICTS');
+      case selectedState.name === 'Germany':
+        return t('GERMANYNAME');
+      default:
+        return selectedState.name;
+    }
+  }
+
+  return chartData.length > 0 ? (
+    <Paper className={'Chart'}>
+      <h1 className={'h1'}>
+        {t('CHARTTAG')}
+        {getText()}
+      </h1>
       <Bar data={ChartData} options={chartOptions}></Bar>
-    </div>
+    </Paper>
   ) : (
     <></>
   );

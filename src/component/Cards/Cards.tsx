@@ -1,45 +1,15 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
-import cx from 'classnames';
 import { useTranslation } from 'react-i18next';
+import cx from 'classnames';
 import Loading from '../Loading/Loading';
-import { fetchDataGermany } from '../../api/api';
 import styles from './Cards.module.css';
 import { Context, Data } from '../Context';
 
 const Cards = () => {
   const { t } = useTranslation();
-  const { data, setData } = useContext(Context);
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetchDataGermany();
-      if (response) {
-        setData([
-          {
-            type: t('CONFIRM'),
-            number: response.cases,
-            difference: response.delta.cases,
-            lastUpdate: response.meta.lastUpdate,
-          },
-          {
-            type: t('RECOVERED'),
-            number: response.recovered,
-            difference: response.delta.recovered,
-            lastUpdate: response.meta.lastUpdate,
-          },
-          {
-            type: t('DEATHS'),
-            number: response.deaths,
-            difference: response.delta.deaths,
-            lastUpdate: response.meta.lastUpdate,
-          },
-        ]);
-      }
-    }
-    fetchData();
-  }, [t, setData]);
+  const { data } = useContext(Context);
 
   function getStyles(e: Data) {
     switch (true) {
@@ -65,7 +35,7 @@ const Cards = () => {
 
   return data ? (
     <div className={styles.container}>
-      <h1 className={styles.h1}>CORONA Tracker for Germany</h1>
+      <h1 className={styles.h1}>{t('CARDTAG')}</h1>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
         {data.map((e: Data, i: number) => {
           return (

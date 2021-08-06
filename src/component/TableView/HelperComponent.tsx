@@ -158,9 +158,12 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Wappen_Landkreis_Vorpommern-Greifswald.svg/140px-Wappen_Landkreis_Vorpommern-Greifswald.svg.png',
   'Ludwigslust-Parchim':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/DEU_Landkreis_Ludwigslust-Parchim_COA.svg/140px-DEU_Landkreis_Ludwigslust-Parchim_COA.svg.png',
-  Chemnitz: null,
-  Erzgebirgskreis: null,
-  Mittelsachsen: null,
+  Chemnitz:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Coat_of_arms_of_Chemnitz.svg/102px-Coat_of_arms_of_Chemnitz.svg.png',
+  Erzgebirgskreis:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Wappen_Erzgebirgskreis.svg/135px-Wappen_Erzgebirgskreis.svg.png',
+  Mittelsachsen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Wappen_Mittelsachsen.svg/135px-Wappen_Mittelsachsen.svg.png',
   Vogtlandkreis: null,
   Zwickau: null,
   Dresden: null,
@@ -341,8 +344,10 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Wappen_Landkreis_Wesermarsch.svg/109px-Wappen_Landkreis_Wesermarsch.svg.png',
   Wittmund:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/DEU_Landkreis_Wittmund_COA.svg/106px-DEU_Landkreis_Wittmund_COA.svg.png',
-  Bremen: null,
-  Bremerhaven: null,
+  Bremen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bremen_Wappen%28Mittel%29.svg/82px-Bremen_Wappen%28Mittel%29.svg.png',
+  Bremerhaven:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Wappen_Bremerhaven.svg/115px-Wappen_Bremerhaven.svg.png',
   Düsseldorf: null,
   Duisburg: null,
   Essen: null,
@@ -425,18 +430,27 @@ export const districts: any = {
   Soest:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/DEU_Kreis_Soest_COA.svg/105px-DEU_Kreis_Soest_COA.svg.png',
   Unna: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Wappen_Kreis_Unna.png/105px-Wappen_Kreis_Unna.png',
-  Darmstadt: null,
-  'Frankfurt am Main': null,
-  'Offenbach am Main': null,
-  Wiesbaden: null,
-  Bergstraße: null,
-  'Darmstadt-Dieburg': null,
-  'Groß-Gerau': null,
-  Hochtaunuskreis: null,
+  Darmstadt:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Wappen_Darmstadt.svg/82px-Wappen_Darmstadt.svg.png',
+  'Frankfurt am Main':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Wappen_Frankfurt_am_Main.svg/110px-Wappen_Frankfurt_am_Main.svg.png',
+  'Offenbach am Main':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Wappen_Offenbach_am_Main.svg/111px-Wappen_Offenbach_am_Main.svg.png',
+  Wiesbaden:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wappen_Wiesbaden.svg/103px-Wappen_Wiesbaden.svg.png',
+  Bergstraße:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/DEU_Kreis_Bergstrasse_COA.svg/126px-DEU_Kreis_Bergstrasse_COA.svg.png',
+  'Darmstadt-Dieburg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/DEU_Landkreis_Darmstadt-Dieburg_COA.svg/141px-DEU_Landkreis_Darmstadt-Dieburg_COA.svg.png',
+  'Groß-Gerau':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/DEU_Gross-Gerau_COA.png/71px-DEU_Gross-Gerau_COA.png',
+  Hochtaunuskreis:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Wappen_Hochtaunuskreis.svg/140px-Wappen_Hochtaunuskreis.svg.png',
   'Main-Kinzig-Kreis': null,
   'Main-Taunus-Kreis': null,
   Odenwaldkreis: null,
-  Offenbach: null,
+  Offenbach:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Wappen_Offenbach_am_Main.svg/111px-Wappen_Offenbach_am_Main.svg.png',
   'Rheingau-Taunus-Kreis': null,
   Wetteraukreis: null,
   Gießen: null,

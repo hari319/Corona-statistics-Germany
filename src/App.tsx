@@ -1,29 +1,17 @@
-import { Suspense, useContext } from 'react';
-import ContextProvider, { Context } from './component/Context';
-import MainHeader from './component/Header/MainHeader';
-import LanguageSelect from './component/MutliLanguage/LanguageSelect';
-import Dashboard from './component/Dashboard';
-import Loading from './component/Loading/Loading';
+import { Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import ContextProvider from './component/Context';
+import Routes from './component/Routes';
 import './component/MutliLanguage/i18n';
 import './App.css';
 
 const App = () => {
-  const { data } = useContext(Context);
   return (
     <Suspense fallback={'loading...'}>
       <ContextProvider>
-        {/* {data.length > 0 ? ( */}
-        {data ? (
-          <>
-            <MainHeader />
-            <div className={'Lang'}>
-              <LanguageSelect />
-            </div>
-            <Dashboard />
-          </>
-        ) : (
-          <Loading />
-        )}
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
       </ContextProvider>
     </Suspense>
   );
