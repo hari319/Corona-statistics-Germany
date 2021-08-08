@@ -17,10 +17,12 @@ const Chart = (props: { chartData: any; type: string }) => {
 
   function getLabel(e: any) {
     switch (true) {
+      case selectedState.code !== 'all':
+        return e.date;
       case type === 'state':
-        return e.state;
+        return e.state + ' ' + e.date;
       case type === 'districts':
-        return e.districts;
+        return e.districts + ' ' + e.date;
     }
   }
 

@@ -7,7 +7,7 @@
   "GERMANYNAME": "Germany",
   "CASES": "Cases",
   "STATECHOSSE": "Choose a state",
-  "HEADER": "COVID-19",
+  "HEADER": "COVID-19 Dashboard",
   "CONFIRM": "Confirmed",
   "RECOVERED": "Recovered",
   "DEATHS": "Deaths",
@@ -15,7 +15,7 @@
   "CARDTAG": "CORONA Tracker for Germany",
   "LOADING": "Loading ...! Please Wait!",
   "TABLETAG": "COVID-19 Tracker list for ",
-  "WEEKS": "Select a Weeks",
+  "WEEKS": "Select a weeks",
   "ALERT": "No Data was returned!. Please retry later.",
   "CORONACARD": "CORONA-Tracker for Germany"
 }

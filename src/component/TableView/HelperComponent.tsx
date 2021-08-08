@@ -164,19 +164,32 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Wappen_Erzgebirgskreis.svg/135px-Wappen_Erzgebirgskreis.svg.png',
   Mittelsachsen:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Wappen_Mittelsachsen.svg/135px-Wappen_Mittelsachsen.svg.png',
-  Vogtlandkreis: null,
-  Zwickau: null,
-  Dresden: null,
-  Bautzen: null,
-  Görlitz: null,
-  Meißen: null,
-  'Sächsische Schweiz-Osterzgebirge': null,
-  'Leipzig (Stadt)': null,
-  'Leipzig (Landkreis)': null,
-  Nordsachsen: null,
-  'Dessau-Roßlau': null,
-  'Halle (Saale)': null,
-  Magdeburg: null,
+  Vogtlandkreis:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Wappen_Vogtlandkreis.svg/129px-Wappen_Vogtlandkreis.svg.png',
+  Zwickau:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DEU_Zwickau_COA.svg/106px-DEU_Zwickau_COA.svg.png',
+  Dresden:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Dresden_Stadtwappen.svg/116px-Dresden_Stadtwappen.svg.png',
+  Bautzen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Coat_of_arm_Bautzen.svg/101px-Coat_of_arm_Bautzen.svg.png',
+  Görlitz:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Wappen_Goerlitz_vector.svg/107px-Wappen_Goerlitz_vector.svg.png',
+  Meißen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Wappen_mei%C3%9Fen.png/112px-Wappen_mei%C3%9Fen.png',
+  'Sächsische Schweiz-Osterzgebirge':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Wappen_Landkreis_Saechsische_Schweiz-Osterzgebirge.svg/126px-Wappen_Landkreis_Saechsische_Schweiz-Osterzgebirge.svg.png',
+  'Leipzig (Stadt)':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Coat_of_arms_of_Leipzig.svg/106px-Coat_of_arms_of_Leipzig.svg.png',
+  'Leipzig (Landkreis)':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Coat_of_arms_of_Leipzig.svg/106px-Coat_of_arms_of_Leipzig.svg.png',
+  Nordsachsen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Wappen_vom_Landkreis_Nordsachsen.svg/120px-Wappen_vom_Landkreis_Nordsachsen.svg.png',
+  'Dessau-Roßlau':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Wappen_Dessau-Rosslau.svg/92px-Wappen_Dessau-Rosslau.svg.png',
+  'Halle (Saale)':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Coat_of_arms_of_Halle_%28Saale%29.svg/99px-Coat_of_arms_of_Halle_%28Saale%29.svg.png',
+  Magdeburg:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Wappen_Magdeburg.svg/100px-Wappen_Magdeburg.svg.png',
   'Altmarkkreis Salzwedel':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Wappen_Altmarkkreis_Salzwedel.svg/106px-Wappen_Altmarkkreis_Salzwedel.svg.png',
   'Anhalt-Bitterfeld':
@@ -198,12 +211,15 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wappen_Landkreis_Stendal.svg/106px-Wappen_Landkreis_Stendal.svg.png',
   Wittenberg:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wappen_Landkreis_Wittenberg.svg/106px-Wappen_Landkreis_Wittenberg.svg.png',
-  Erfurt: null,
-  Gera: null,
-  Jena: null,
-  Suhl: null,
-  Weimar: null,
-  Eisenach: null,
+  Erfurt:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/DEU_Erfurt_COA.svg/102px-DEU_Erfurt_COA.svg.png',
+  Gera: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wappen_Gera.svg/120px-Wappen_Gera.svg.png',
+  Jena: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wappen_Jena.svg/100px-Wappen_Jena.svg.png',
+  Suhl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Wappen_Suhl.svg/100px-Wappen_Suhl.svg.png',
+  Weimar:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Wappen_Weimar.svg/101px-Wappen_Weimar.svg.png',
+  Eisenach:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Wappen_Eisenach.svg/88px-Wappen_Eisenach.svg.png',
   Eichsfeld:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DEU_Landkreis_Eichsfeld_1995_COA.svg/101px-DEU_Landkreis_Eichsfeld_1995_COA.svg.png',
   Nordhausen:
@@ -238,21 +254,34 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Wappen_Landkreis_Greiz.svg/113px-Wappen_Landkreis_Greiz.svg.png',
   'Altenburger Land':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Wappen_Landkreis_Altenburger_Land.svg/115px-Wappen_Landkreis_Altenburger_Land.svg.png',
-  Flensburg: null,
-  Kiel: null,
-  Lübeck: null,
-  Neumünster: null,
-  Dithmarschen: null,
-  'Herzogtum Lauenburg': null,
-  Nordfriesland: null,
-  Ostholstein: null,
-  Pinneberg: null,
-  Plön: null,
-  'Rendsburg-Eckernförde': null,
-  'Schleswig-Flensburg': null,
-  Segeberg: null,
-  Steinburg: null,
-  Stormarn: null,
+  Flensburg:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/DEU_Flensburg_COA.svg/103px-DEU_Flensburg_COA.svg.png',
+  Kiel: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Wappen_Kiel.svg/115px-Wappen_Kiel.svg.png',
+  Lübeck:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/DEU_Luebeck_COA.svg/104px-DEU_Luebeck_COA.svg.png',
+  Neumünster:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Wappen_neumuenster.svg/92px-Wappen_neumuenster.svg.png',
+  Dithmarschen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Wappen_Kreis_Dithmarschen.svg/129px-Wappen_Kreis_Dithmarschen.svg.png',
+  'Herzogtum Lauenburg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wappen_Herzogtum_Lauenburg_alt.svg/86px-Wappen_Herzogtum_Lauenburg_alt.svg.png',
+  Nordfriesland:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/DEU_Kreis_Nordfriesland_COA.svg/128px-DEU_Kreis_Nordfriesland_COA.svg.png',
+  Ostholstein:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Wappen_Kreis_Ostholstein.svg/114px-Wappen_Kreis_Ostholstein.svg.png',
+  Pinneberg:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Wappen_Pinneberg.svg/109px-Wappen_Pinneberg.svg.png',
+  Plön: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wappen_von_Ploen.png/109px-Wappen_von_Ploen.png',
+  'Rendsburg-Eckernförde':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Wappen_Kreis_Rendsburg-Eckernfoerde.svg/139px-Wappen_Kreis_Rendsburg-Eckernfoerde.svg.png',
+  'Schleswig-Flensburg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wappen_Kreis_Schleswig-Flensburg.svg/138px-Wappen_Kreis_Schleswig-Flensburg.svg.png',
+  Segeberg:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Coa_Kreis_Segeberg.svg/125px-Coa_Kreis_Segeberg.svg.png',
+  Steinburg:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/DEU_Kreis_Steinburg_COA.svg/150px-DEU_Kreis_Steinburg_COA.svg.png',
+  Stormarn:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Wappen_Kreis_Stormarn.svg/131px-Wappen_Kreis_Stormarn.svg.png',
   Hamburg:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/DEU_Hamburg_COA.svg/171px-DEU_Hamburg_COA.svg.png',
   Braunschweig:
@@ -348,16 +377,26 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bremen_Wappen%28Mittel%29.svg/82px-Bremen_Wappen%28Mittel%29.svg.png',
   Bremerhaven:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Wappen_Bremerhaven.svg/115px-Wappen_Bremerhaven.svg.png',
-  Düsseldorf: null,
-  Duisburg: null,
-  Essen: null,
-  Krefeld: null,
-  Mönchengladbach: null,
-  'Mülheim an der Ruhr': null,
-  Oberhausen: null,
-  Remscheid: null,
-  Solingen: null,
-  Wuppertal: null,
+  Düsseldorf:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/DEU_D%C3%BCsseldorf_COA.svg/100px-DEU_D%C3%BCsseldorf_COA.svg.png',
+  Duisburg:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/DEU_Duisburg_COA.svg/110px-DEU_Duisburg_COA.svg.png',
+  Essen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/DEU_Essen_COA.svg/120px-DEU_Essen_COA.svg.png',
+  Krefeld:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/DEU_Krefeld_COA.svg/110px-DEU_Krefeld_COA.svg.png',
+  Mönchengladbach:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DEU_Moenchengladbach_COA.svg/96px-DEU_Moenchengladbach_COA.svg.png',
+  'Mülheim an der Ruhr':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/DEU_Muelheim_an_der_Ruhr_COA.svg/74px-DEU_Muelheim_an_der_Ruhr_COA.svg.png',
+  Oberhausen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/DEU_Oberhausen_COA.svg/79px-DEU_Oberhausen_COA.svg.png',
+  Remscheid:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/DEU_Remscheid_COA.svg/104px-DEU_Remscheid_COA.svg.png',
+  Solingen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/DEU_Solingen_COA.svg/84px-DEU_Solingen_COA.svg.png',
+  Wuppertal:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/DEU_Wuppertal_COA.svg/109px-DEU_Wuppertal_COA.svg.png',
   Kleve:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/DEU_Kreis_Kleve_COA.svg/105px-DEU_Kreis_Kleve_COA.svg.png',
   Mettmann:
@@ -368,9 +407,10 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Kreiswappen_des_Kreises_Viersen.png/120px-Kreiswappen_des_Kreises_Viersen.png',
   Wesel:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kreiswappen_des_Kreises_Wesel.svg/120px-Kreiswappen_des_Kreises_Wesel.svg.png',
-  Bonn: null,
-  Köln: null,
-  Leverkusen: null,
+  Bonn: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/DEU_Bonn_COA.svg/105px-DEU_Bonn_COA.svg.png',
+  Köln: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/DEU_Koeln_COA.svg/120px-DEU_Koeln_COA.svg.png',
+  Leverkusen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/DEU_Leverkusen_COA.svg/104px-DEU_Leverkusen_COA.svg.png',
   'Städteregion Aachen':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/DEU_Staedteregion_Aachen_COA.svg/102px-DEU_Staedteregion_Aachen_COA.svg.png',
   Düren:
@@ -378,7 +418,7 @@ export const districts: any = {
   'Rhein-Erft-Kreis':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/DEU_Rhein-Erft-Kreis_COA.svg/105px-DEU_Rhein-Erft-Kreis_COA.svg.png',
   Euskirchen:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Wappen_Kreis_Euskirchen.svg/98px-Wappen_Kreis_Euskirchen.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/DEU_Euskirchen_COA.svg/110px-DEU_Euskirchen_COA.svg.png',
   Heinsberg:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Kreiswappen_des_Kreises_Heinsberg.png/98px-Kreiswappen_des_Kreises_Heinsberg.png',
   'Oberbergischer Kreis':
@@ -387,37 +427,45 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Kreiswappen_des_Rheinisch-Bergischen_Kreises.png/109px-Kreiswappen_des_Rheinisch-Bergischen_Kreises.png',
   'Rhein-Sieg-Kreis':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rhein-Sieg-Kreis-Wappen.png/101px-Rhein-Sieg-Kreis-Wappen.png',
-  Bottrop: null,
-  Gelsenkirchen: null,
-  Münster: null,
+  Bottrop:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/DEU_Bottrop_COA.svg/107px-DEU_Bottrop_COA.svg.png',
+  Gelsenkirchen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/DEU_Gelsenkirchen_COA.svg/96px-DEU_Gelsenkirchen_COA.svg.png',
+  Münster:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/DEU_Muenster_COA.svg/96px-DEU_Muenster_COA.svg.png',
   Borken:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Wappen_Kreis_Borken.svg/107px-Wappen_Kreis_Borken.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/DEU_Borken_%28Westf.%29_COA.svg/109px-DEU_Borken_%28Westf.%29_COA.svg.png',
   Coesfeld:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/DEU_Kreis_Coesfeld_COA.svg/106px-DEU_Kreis_Coesfeld_COA.svg.png',
   Recklinghausen:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Kreis_Recklinghausen_Wappen.svg/102px-Kreis_Recklinghausen_Wappen.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/DEU_Recklinghausen_COA.svg/63px-DEU_Recklinghausen_COA.svg.png',
   Steinfurt:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/DEU_Kreis_Steinfurt_COA.svg/99px-DEU_Kreis_Steinfurt_COA.svg.png',
   Warendorf:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Wappen_des_Kreises_Warendorf.svg/97px-Wappen_des_Kreises_Warendorf.svg.png',
-  Bielefeld: null,
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/DE_Warendorf_COA.svg/100px-DE_Warendorf_COA.svg.png',
+  Bielefeld:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/DEU_Bielefeld_COA.svg/103px-DEU_Bielefeld_COA.svg.png',
   Gütersloh:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kreiswappen_des_Kreises_G%C3%BCtersloh.svg/98px-Kreiswappen_des_Kreises_G%C3%BCtersloh.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/DEU_G%C3%BCtersloh_COA.svg/110px-DEU_G%C3%BCtersloh_COA.svg.png',
   Herford:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Kreiswappen_des_Kreises_Herford.svg/103px-Kreiswappen_des_Kreises_Herford.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wappen_von_Herford.svg/70px-Wappen_von_Herford.svg.png',
   Höxter:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Kreiswappen_des_Kreises_H%C3%B6xter.svg/104px-Kreiswappen_des_Kreises_H%C3%B6xter.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wappen_H%C3%B6xter.svg/113px-Wappen_H%C3%B6xter.svg.png',
   Lippe:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Kreiswappen_des_Kreises_Lippe.svg/111px-Kreiswappen_des_Kreises_Lippe.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/DEU_Kreis_Lippe_COA.svg/139px-DEU_Kreis_Lippe_COA.svg.png',
   'Minden-Lübbecke':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/DEU_Kreis_Minden-Luebbecke_COA.svg/105px-DEU_Kreis_Minden-Luebbecke_COA.svg.png',
   Paderborn:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Kreiswappen_des_Kreises_Paderborn.svg/104px-Kreiswappen_des_Kreises_Paderborn.svg.png',
-  Bochum: null,
-  Dortmund: null,
-  Hagen: null,
-  Hamm: null,
-  Herne: null,
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/DEU_Paderborn_COA.svg/100px-DEU_Paderborn_COA.svg.png',
+  Bochum:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Stadtwappen_der_kreisfreien_Stadt_Bochum.svg/100px-Stadtwappen_der_kreisfreien_Stadt_Bochum.svg.png',
+  Dortmund:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/DEU_Dortmund_COA.svg/120px-DEU_Dortmund_COA.svg.png',
+  Hagen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/DEU_Hagen_COA.svg/95px-DEU_Hagen_COA.svg.png',
+  Hamm: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/DEU_Hamm_COA.svg/100px-DEU_Hamm_COA.svg.png',
+  Herne:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DEU_Herne_COA.svg/101px-DEU_Herne_COA.svg.png',
   'Ennepe-Ruhr-Kreis':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Wappen_des_Ennepe-Ruhr-Kreises.svg/100px-Wappen_des_Ennepe-Ruhr-Kreises.svg.png',
   Hochsauerlandkreis:
@@ -446,26 +494,44 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/DEU_Gross-Gerau_COA.png/71px-DEU_Gross-Gerau_COA.png',
   Hochtaunuskreis:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Wappen_Hochtaunuskreis.svg/140px-Wappen_Hochtaunuskreis.svg.png',
-  'Main-Kinzig-Kreis': null,
-  'Main-Taunus-Kreis': null,
-  Odenwaldkreis: null,
+  'Main-Kinzig-Kreis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/DEU_Main-Kinzig-Kreis_COA.svg/141px-DEU_Main-Kinzig-Kreis_COA.svg.png',
+  'Main-Taunus-Kreis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Wappen_Main-Taunus-Kreis.svg/140px-Wappen_Main-Taunus-Kreis.svg.png',
+  Odenwaldkreis:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/DEU_Odenwaldkreis_COA.svg/140px-DEU_Odenwaldkreis_COA.svg.png',
   Offenbach:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Wappen_Offenbach_am_Main.svg/111px-Wappen_Offenbach_am_Main.svg.png',
-  'Rheingau-Taunus-Kreis': null,
-  Wetteraukreis: null,
-  Gießen: null,
-  'Lahn-Dill-Kreis': null,
-  'Limburg-Weilburg': null,
-  'Marburg-Biedenkopf': null,
-  Vogelsbergkreis: null,
-  'Kassel (Stadt)': null,
-  Fulda: null,
-  'Hersfeld-Rotenburg': null,
-  'Kassel (Landkreis)': null,
-  'Schwalm-Eder-Kreis': null,
-  'Waldeck-Frankenberg': null,
-  'Werra-Meißner-Kreis': null,
-  Koblenz: null,
+  'Rheingau-Taunus-Kreis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Wappen_Rheingau-Taunus-Kreis.svg/140px-Wappen_Rheingau-Taunus-Kreis.svg.png',
+  Wetteraukreis:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wappen_Wetteraukreis.svg/140px-Wappen_Wetteraukreis.svg.png',
+  Gießen:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Wappen_Gie%C3%9Fen.svg/111px-Wappen_Gie%C3%9Fen.svg.png',
+  'Lahn-Dill-Kreis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Wappen_Lahn-Dill-Kreis.svg/140px-Wappen_Lahn-Dill-Kreis.svg.png',
+  'Limburg-Weilburg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/DEU_Landkreis_Limburg-Weilburg_COA.svg/140px-DEU_Landkreis_Limburg-Weilburg_COA.svg.png',
+  'Marburg-Biedenkopf':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/DEU_Landkreis_Marburg-Biedenkopf_COA.svg/125px-DEU_Landkreis_Marburg-Biedenkopf_COA.svg.png',
+  Vogelsbergkreis:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wappen_Vogelsbergkreis.svg/140px-Wappen_Vogelsbergkreis.svg.png',
+  'Kassel (Stadt)':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Coat_of_arms_of_Kassel.svg/103px-Coat_of_arms_of_Kassel.svg.png',
+  Fulda:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Wappen_Fulda.svg/80px-Wappen_Fulda.svg.png',
+  'Hersfeld-Rotenburg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Wappen_Landkreis_Hersfeld-Rotenburg.svg/140px-Wappen_Landkreis_Hersfeld-Rotenburg.svg.png',
+  'Kassel (Landkreis)':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Coat_of_arms_of_Kassel.svg/103px-Coat_of_arms_of_Kassel.svg.png',
+  'Schwalm-Eder-Kreis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Wappen_Schwalm-Eder-Kreis.svg/140px-Wappen_Schwalm-Eder-Kreis.svg.png',
+  'Waldeck-Frankenberg':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Wappen_Landkreis_Waldeck-Frankenberg.svg/140px-Wappen_Landkreis_Waldeck-Frankenberg.svg.png',
+  'Werra-Meißner-Kreis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wappen_Werra-Meissner-Kreis.svg/138px-Wappen_Werra-Meissner-Kreis.svg.png',
+  Koblenz:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/DEU_Koblenz_COA.svg/102px-DEU_Koblenz_COA.svg.png',
   Ahrweiler:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Landkreiswappen_des_Landkreises_Ahrweiler.png/105px-Landkreiswappen_des_Landkreises_Ahrweiler.png',
   'Altenkirchen (Westerwald)':
@@ -486,7 +552,8 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Wappen_Rhein-Lahn-Kreis.png/104px-Wappen_Rhein-Lahn-Kreis.png',
   Westerwaldkreis:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wappen_Westerwaldkreis.png/105px-Wappen_Westerwaldkreis.png',
-  Trier: null,
+  Trier:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/DEU_Trier_COA.svg/96px-DEU_Trier_COA.svg.png',
   'Bernkastel-Wittlich':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wappen_Landkreis_Bernkastel-Wittlich.png/92px-Wappen_Landkreis_Bernkastel-Wittlich.png',
   'Eifelkreis Bitburg-Prüm':
@@ -495,16 +562,26 @@ export const districts: any = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Wappen_Landkreis_Vulkaneifel.png/102px-Wappen_Landkreis_Vulkaneifel.png',
   'Trier-Saarburg':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Wappen_Landkreis_Trier-Saarburg.png/111px-Wappen_Landkreis_Trier-Saarburg.png',
-  'Frankenthal (Pfalz)': null,
-  'Kaiserslautern (Stadt)': null,
-  'Landau in der Pfalz': null,
-  'Ludwigshafen am Rhein': null,
-  Mainz: null,
-  'Neustadt an der Weinstraße': null,
-  Pirmasens: null,
-  Speyer: null,
-  Worms: null,
-  Zweibrücken: null,
+  'Frankenthal (Pfalz)':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/DEU_Frankenthal_COA.svg/99px-DEU_Frankenthal_COA.svg.png',
+  'Kaiserslautern (Stadt)':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Kaiserslautern-Stadtwappen.svg/100px-Kaiserslautern-Stadtwappen.svg.png',
+  'Landau in der Pfalz':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/DEU_Landau_in_der_Pfalz_COA.svg/105px-DEU_Landau_in_der_Pfalz_COA.svg.png',
+  'Ludwigshafen am Rhein':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/DEU_Ludwigshafen_COA.svg/110px-DEU_Ludwigshafen_COA.svg.png',
+  Mainz:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Coat_of_arms_of_Mainz-2008_new.svg/99px-Coat_of_arms_of_Mainz-2008_new.svg.png',
+  'Neustadt an der Weinstraße':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/DEU_Neustadt_an_der_Weinstrasse_COA.svg/105px-DEU_Neustadt_an_der_Weinstrasse_COA.svg.png',
+  Pirmasens:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Wappen_Pirmasens.svg/111px-Wappen_Pirmasens.svg.png',
+  Speyer:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/DEU_Speyer_COA.svg/100px-DEU_Speyer_COA.svg.png',
+  Worms:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/DEU_Worms_COA.svg/111px-DEU_Worms_COA.svg.png',
+  Zweibrücken:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wappen_Zweibr%C3%BCcken.svg/97px-Wappen_Zweibr%C3%BCcken.svg.png',
   'Alzey-Worms':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Wappen_Landkreis_Alzey-Worms.png/92px-Wappen_Landkreis_Alzey-Worms.png',
   'Bad Dürkheim':
@@ -614,9 +691,9 @@ export const districts: any = {
   Ingolstadt:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Wappen_Ingolstadt.svg/280px-Wappen_Ingolstadt.svg.png',
   'München (Stadt)':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Muenchen_Kleines_Stadtwappen.svg/280px-Muenchen_Kleines_Stadtwappen.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Muenchen_Kleines_Stadtwappen.svg/96px-Muenchen_Kleines_Stadtwappen.svg.png',
   'Rosenheim (Stadt)':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Wappen_Rosenheim_Neu.svg/280px-Wappen_Rosenheim_Neu.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Wappen_Rosenheim_Neu.svg/112px-Wappen_Rosenheim_Neu.svg.png',
   Altötting:
     'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Wappen_Landkreis_Altoetting.png/111px-Wappen_Landkreis_Altoetting.png',
   'Berchtesgadener Land':
@@ -644,7 +721,7 @@ export const districts: any = {
   'Mühldorf a. Inn':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wappen_M%C3%BChldorf_am_Inn.svg/280px-Wappen_M%C3%BChldorf_am_Inn.svg.png',
   'München (Landkreis)':
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Wappen_Landkreis_Muenchen.png/112px-Wappen_Landkreis_Muenchen.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Muenchen_Kleines_Stadtwappen.svg/96px-Muenchen_Kleines_Stadtwappen.svg.png',
   'Neuburg-Schrobenhausen':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wappen_Landkreis_Neuburg-Schrobenhausen.svg/108px-Wappen_Landkreis_Neuburg-Schrobenhausen.svg.png',
   'Pfaffenhofen a.d. Ilm':
