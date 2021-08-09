@@ -6,7 +6,8 @@ import './RadioSelection.css';
 
 const RadioSelection = () => {
   const { t } = useTranslation();
-  const { radioValue, setRadioValue } = useContext(Context);
+  const { radioValue, setRadioValue, showTableChart, setShowTableChart } =
+    useContext(Context);
 
   return (
     <div className={'radio'}>
@@ -17,6 +18,7 @@ const RadioSelection = () => {
         value={radioValue}
         onChange={(e) => {
           setRadioValue(e.target.value);
+          setShowTableChart(showTableChart === true && false);
         }}
         row
         className={'radioSelection'}

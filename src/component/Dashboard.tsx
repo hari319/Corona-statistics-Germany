@@ -10,7 +10,7 @@ import { fetchDataGermany } from '../api/api';
 import RadioSelection from './RadioSelection/RadioSelection';
 
 const Dashboard = () => {
-  const { data, setData } = useContext(Context);
+  const { radioValue, showTableChart, data, setData } = useContext(Context);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -47,8 +47,12 @@ const Dashboard = () => {
       <Container component="main" maxWidth="lg">
         <Cards />
         <RadioSelection />
-        <TableViewBuilder />
-        <TableSelection />
+        {radioValue && (
+          <>
+            <TableViewBuilder />
+            {showTableChart && <TableSelection />}
+          </>
+        )}
       </Container>
     </>
   ) : (

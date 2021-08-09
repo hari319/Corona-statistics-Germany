@@ -32,6 +32,7 @@ const FormBuilder = () => {
     setWeeks,
     setStateData,
     setDistrictsData,
+    setShowTableChart,
     radioValue,
   } = useContext(Context);
   const [countryPicker, setCountryPicker] = useState<SelectedCountryValue>({
@@ -96,6 +97,7 @@ const FormBuilder = () => {
     if (districtsData !== '') {
       setDistrictsData(districtsData);
     }
+    setShowTableChart(true);
     setStateData(countryData);
     setWeeks(WeeksPicker);
     setSelectedState(countryPicker);

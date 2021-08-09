@@ -28,12 +28,14 @@ export const Context = createContext<{
   setStateData: (value: CountryData[]) => void;
   setDistrictsData: (value: CountryData[]) => void;
   setRadioValue: (value: string) => void;
+  setShowTableChart: (value: boolean) => void;
   selectedState: SelectedCountryValue;
   weeks: string;
   stateData: CountryData[];
   districtsData: CountryData[];
   data: Data[];
   radioValue: string;
+  showTableChart: boolean;
 }>({
   setSelectedState: () => {},
   setData: () => {},
@@ -41,6 +43,7 @@ export const Context = createContext<{
   setStateData: () => {},
   setDistrictsData: () => {},
   setRadioValue: () => {},
+  setShowTableChart: () => {},
   selectedState: {
     name: '',
     code: '',
@@ -51,6 +54,7 @@ export const Context = createContext<{
   stateData: [],
   districtsData: [],
   radioValue: '',
+  showTableChart: false,
 });
 
 const ContextProvider: FunctionComponent<any> = ({ children }) => {
@@ -67,7 +71,8 @@ const Auth = () => {
   const [stateData, setStateData] = useState<CountryData[]>([]);
   const [districtsData, setDistrictsData] = useState<CountryData[]>([]);
   const [weeks, setWeeks] = useState<string>('');
-  const [radioValue, setRadioValue] = useState<string>('states');
+  const [radioValue, setRadioValue] = useState<string>('');
+  const [showTableChart, setShowTableChart] = useState<boolean>(false);
 
   return {
     selectedState,
@@ -76,12 +81,14 @@ const Auth = () => {
     data,
     districtsData,
     radioValue,
+    showTableChart,
     setSelectedState,
     setData,
     setWeeks,
     setStateData,
     setDistrictsData,
     setRadioValue,
+    setShowTableChart,
   };
 };
 
