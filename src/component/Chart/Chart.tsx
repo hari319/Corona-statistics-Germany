@@ -64,8 +64,8 @@ const Chart = (props: { chartData: CountryData[] }) => {
 
   function getText() {
     switch (true) {
-      case selectedState.name === 'Germany':
-        return t('GERMANYNAME');
+      case selectedState.code === 'all':
+        return t('GERMANY');
       default:
         return selectedState.name;
     }

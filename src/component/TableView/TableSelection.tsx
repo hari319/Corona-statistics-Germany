@@ -54,7 +54,7 @@ const TableSelection = () => {
       setDistricts(districtsData);
       setState();
     }
-  }, [selectedState]);
+  }, [stateData]);
 
   return selectedState.code === 'all' && weeks.toString() === '0' ? (
     <TableViewCollapse rows={rowsState} rowsDistricts={rowsDistricts} />

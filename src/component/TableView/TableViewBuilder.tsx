@@ -97,6 +97,7 @@ const FormBuilder = () => {
     if (districtsData !== '') {
       setDistrictsData(districtsData);
     }
+
     setShowTableChart(true);
     setStateData(countryData);
     setWeeks(WeeksPicker);

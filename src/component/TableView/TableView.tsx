@@ -82,7 +82,8 @@ const TableView: React.FC<TableViewProps> = ({ rows, type }) => {
     <>
       <Paper className={styles.paper}>
         <h1 className={styles.h1}>
-          {t('TABLETAG')} {selectedState.name}
+          {t('TABLETAG')}{' '}
+          {selectedState.code === 'all' ? t('GERMANY') : selectedState.name}
         </h1>
         <TableContainer className={styles.container}>
           <Table stickyHeader aria-label="sticky table">
