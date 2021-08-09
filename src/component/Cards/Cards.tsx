@@ -11,25 +11,20 @@ const Cards = () => {
   const { t } = useTranslation();
   const { data } = useContext(Context);
 
-  function getStyles(e: Data) {
+  function getItem(e: Data, type: number) {
     switch (true) {
       case e.type === 'Confirmed' || e.type === 'Infektionen':
-        return styles.Confirmed;
+        return type === 0
+          ? styles.Confirmed
+          : 'https://img.icons8.com/pastel-glyph/50/fa314a/coronavirus--v3.png';
       case e.type === 'Recovered' || e.type === 'Genesen':
-        return styles.Recovered;
+        return type === 0
+          ? styles.Recovered
+          : 'https://img.icons8.com/ios-filled/50/26e07f/recovery.png';
       case e.type === 'Deaths' || e.type === 'Todesfälle':
-        return styles.Deaths;
-    }
-  }
-
-  function getIcon(e: Data) {
-    switch (true) {
-      case e.type === 'Confirmed' || e.type === 'Infektionen':
-        return 'https://img.icons8.com/pastel-glyph/50/fa314a/coronavirus--v3.png';
-      case e.type === 'Recovered' || e.type === 'Genesen':
-        return 'https://img.icons8.com/ios-filled/50/26e07f/recovery.png';
-      case e.type === 'Deaths' || e.type === 'Todesfälle':
-        return 'https://img.icons8.com/ios-filled/50/000000/death.png';
+        return type === 0
+          ? styles.Deaths
+          : 'https://img.icons8.com/ios-filled/50/000000/death.png';
     }
   }
 
@@ -43,12 +38,12 @@ const Cards = () => {
               item
               xs={12}
               md
-              className={cx(styles.card, getStyles(e))}
+              className={cx(styles.card, getItem(e, 0))}
               key={i}
             >
               <Card className={cx(styles.innerCard)}>
                 <CardContent>
-                  <img src={getIcon(e)} alt={e.type} />
+                  <img src={getItem(e, 1)} alt={e.type} />
                   <Typography gutterBottom>{e.type}</Typography>
                   <Typography variant="h4">
                     <CountUp

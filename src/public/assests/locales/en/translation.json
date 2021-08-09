@@ -1,12 +1,13 @@
 {
   "DATE": "Date",
   "ADD": "Add",
-  "STATE": "State",
+  "STATE": "States",
   "DISTRICTS": "Districts",
   "GERMANY": "Germany (States + Districts)",
   "GERMANYNAME": "Germany",
   "CASES": "Cases",
   "STATECHOSSE": "Choose a state",
+  "DISTRICTCHOSSE": "Choose a District",
   "HEADER": "COVID-19 Dashboard",
   "CONFIRM": "Confirmed",
   "RECOVERED": "Recovered",
@@ -17,5 +18,6 @@
   "TABLETAG": "COVID-19 Tracker list for ",
   "WEEKS": "Select a weeks",
   "ALERT": "No Data was returned!. Please retry later.",
-  "CORONACARD": "CORONA-Tracker for Germany"
+  "CORONACARD": "CORONA-Tracker for Germany",
+  "RADIOTAG": "Select the view type"
 }

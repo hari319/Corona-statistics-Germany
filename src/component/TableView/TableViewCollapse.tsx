@@ -13,19 +13,19 @@ import {
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useTranslation } from 'react-i18next';
-import { StateData, DistrictsData } from '../Context';
+import { CountryData } from '../Context';
 import { StyledTableRow, StyledTableCell, getImage } from './HelperComponent';
 import TableView from './TableView';
 import styles from './TableView.module.css';
 import Chart from '../Chart/Chart';
 
 interface TableViewCollapseProps {
-  rows: StateData[];
-  rowsDistricts: DistrictsData[];
+  rows: CountryData[];
+  rowsDistricts: CountryData[];
 }
 
 interface Column {
-  id: 'id' | 'state' | 'date' | 'cases' | 'recovered' | 'deaths';
+  id: 'id' | 'name' | 'date' | 'cases' | 'recovered' | 'deaths';
   label: string;
   minWidth?: number;
   align?: 'right';
@@ -36,7 +36,7 @@ const RowBuilder = (props: {
   row: any;
   index: number;
   columns: Column[];
-  rowsDistricts: DistrictsData[];
+  rowsDistricts: CountryData[];
 }) => {
   const { row, index, columns, rowsDistricts } = props;
   const [open, setOpen] = useState(false);
@@ -50,7 +50,7 @@ const RowBuilder = (props: {
             <StyledTableCell key={i} align={'center'}>
               {i > 0 ? (
                 <>
-                  {column.id === 'state' && getImage(row['state'], 'state')}
+                  {column.id === 'name' && getImage(row['name'], 'states')}
                   {column.format && typeof value === 'number'
                     ? column.format(value)
                     : value}
@@ -72,10 +72,10 @@ const RowBuilder = (props: {
       </StyledTableRow>
       <StyledTableRow>
         <StyledTableCell style={{ padding: open ? 35 : 0 }} colSpan={6}>
-          {rowsDistricts.map((e: DistrictsData) => {
+          {rowsDistricts.map((e: CountryData) => {
             const rowsDistrict: any = Object.values(e)[0];
             return (
-              row.state.includes(Object.keys(e)) && (
+              row.name.includes(Object.keys(e)) && (
                 <Collapse in={open} timeout="auto" unmountOnExit>
                   <TableView rows={rowsDistrict} type={'districts'} />
                 </Collapse>
@@ -95,11 +95,11 @@ const TableViewCollapse: React.FC<TableViewCollapseProps> = ({
   const { t } = useTranslation();
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [chartData, setChartData] = useState<any[]>([]);
+  const [chartData, setChartData] = useState<CountryData[]>([]);
 
   const columns: Column[] = [
     { id: 'id', label: '', minWidth: 1 },
-    { id: 'state', label: t('STATE'), minWidth: 150 },
+    { id: 'name', label: t('STATE'), minWidth: 150 },
     { id: 'date', label: t('DATE'), minWidth: 100 },
     { id: 'cases', label: t('CASES'), minWidth: 100 },
     {
@@ -128,10 +128,10 @@ const TableViewCollapse: React.FC<TableViewCollapseProps> = ({
   };
 
   useEffect(() => {
-    let data: any[] = [];
+    let data: CountryData[] = [];
     rows
       .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-      .forEach((row: any, i) => {
+      .forEach((row: CountryData, i) => {
         data.push(row);
       });
     setChartData(data);
@@ -162,7 +162,7 @@ const TableViewCollapse: React.FC<TableViewCollapseProps> = ({
             <TableBody>
               {rows
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row: StateData, index: number) => {
+                .map((row: CountryData, index: number) => {
                   return (
                     <RowBuilder
                       row={row}
@@ -186,7 +186,7 @@ const TableViewCollapse: React.FC<TableViewCollapseProps> = ({
         />
       </Paper>
 
-      <Chart chartData={chartData} type={'state'} />
+      <Chart chartData={chartData} />
     </>
   );
 };

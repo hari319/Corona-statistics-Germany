@@ -1,4 +1,5 @@
 /* eslint-disable no-throw-literal */
+import GermanyDistricts from "../JSON/GermnayDistricts.json"
 
 const URL = "https://api.corona-zahlen.org";
 const options = {
@@ -7,6 +8,7 @@ const options = {
   day: '2-digit',
 };
 
+//This API produces a list of total cases, recovered cases, and deaths for Germany as a whole.
 const fetchDataGermany = async() => {
   const fetchPromise = await fetch(
     `${URL}/germany`,
@@ -34,25 +36,7 @@ const fetchDataGermany = async() => {
   return fetchPromise;
 }
 
-const fetchDataStateALL= async(state) => {  
-  const fetchPromise = await fetch(`${URL}/states/${state}`, {
-    method: 'GET',
-  }).then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-    })
-    .catch((error) => {
-      throw new Error('FETCH ERROR:', error);
-    });
-  
-  if (fetchPromise && fetchPromise.data) {
-    return fetchPromise.data[state]
-  } else {
-    AlertNotification();
-  }
-}
-
+//This API returns a list of all state with total cases, recovered and deaths.
 const fetchDataAllState = async () => {
   const fetchPromise = await fetch(`${URL}/states`, {
     method: 'GET',
@@ -71,7 +55,7 @@ const fetchDataAllState = async () => {
       for (const property in fetchPromise.data) {
         let res = fetchPromise.data[property]
         finalResponse.push({
-          state: res.name,
+          name: res.name,
           date:new Date().toLocaleDateString("de-DE", options),
           cases: res.cases,
           recovered: res.recovered,
@@ -84,55 +68,7 @@ const fetchDataAllState = async () => {
   }  
 }
 
-const fetchDataStatePerWeek = async (state, weeks) => {
-  let cases = await fetch(`${URL}/states/${state}/history/cases/${weeks}`, {
-    method: 'GET',
-  }).then(async (response) => {
-      if (response.ok) {
-          return await response.json();
-      }
-    }).catch((error) => {
-      throw new Error('FETCH ERROR:', error);
-    });
-  
-  let recovered= await fetch(`${URL}/states/${state}/history/recovered/${weeks}`, {
-    method: 'GET',
-  }).then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-    }).catch((error) => {
-      throw new Error('FETCH ERROR:', error);
-    });
-  
-  let deaths= await fetch(`${URL}/states/${state}/history/deaths/${weeks}`, {
-    method: 'GET',
-  }).then((response) => {
-      if (response.ok) {
-          return response.json();
-      }
-    }).catch((error) => {
-      throw new Error('FETCH ERROR:', error);
-    });
-  
-  const finalResponse = [];
-
-  if (emptyCheck(cases.data[state])  && emptyCheck(recovered.data[state]) && emptyCheck(deaths.data[state])) {  
-    for (let index = cases.data[state].history.length; index > 0; --index) {
-      finalResponse.push({
-        cases: cases.data[state].history[index -1].cases,
-        recovered: recovered.data[state].history[index -1].recovered,
-        deaths: deaths.data[state].history[index- 1].deaths,
-        date: new Date(cases.data[state].history[index - 1].date).toLocaleDateString("de-DE", options),
-        state:cases.data[state].name,
-      });
-    }
-    return finalResponse
-  } else {
-     AlertNotification();
-  }
-}
-
+//This API returns a list of all state districts' data .
 const fetchDataAllDistricts = async () => {
   const fetchPromise = await fetch(`${URL}/districts`, {
     method: 'GET',
@@ -151,7 +87,7 @@ const fetchDataAllDistricts = async () => {
     for (const property in fetchPromise.data) {
       let res = fetchPromise.data[property]
       let response = {
-        districts: res.name,
+        name: res.name,
         date:new Date().toLocaleDateString("de-DE", options),
         cases: res.cases,
         recovered: res.recovered,
@@ -171,10 +107,83 @@ const fetchDataAllDistricts = async () => {
         },)
       }
     }
+
     return finalResponse
   } else {
      AlertNotification();
   }  
+}
+
+// This API returns the entire list of a single state/district.
+const fetchDataALL= async(APItype, typeValue) => {  
+  const fetchPromise = await fetch(`${URL}/${APItype}/${typeValue}`, {
+    method: 'GET',
+  }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .catch((error) => {
+      throw new Error('FETCH ERROR:', error);
+    });
+  
+  if (fetchPromise && fetchPromise.data) {
+    return fetchPromise.data[typeValue]
+  } else {
+    AlertNotification();
+  }
+}
+
+// This API gives data for a particular state/district per request weeks.
+const fetchDataPerWeek = async (APItype, typeValue, weeks) => {
+
+  let cases = await fetch(`${URL}/${APItype}/${typeValue}/history/cases/${weeks}`, {
+    method: 'GET',
+  }).then(async (response) => {
+      if (response.ok) {
+          return await response.json();
+      }
+    }).catch((error) => {
+      throw new Error('FETCH ERROR:', error);
+    });
+  
+  let recovered= await fetch(`${URL}/${APItype}/${typeValue}/history/recovered/${weeks}`, {
+    method: 'GET',
+  }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).catch((error) => {
+      throw new Error('FETCH ERROR:', error);
+    });
+  
+  let deaths= await fetch(`${URL}/${APItype}/${typeValue}/history/deaths/${weeks}`, {
+    method: 'GET',
+  }).then((response) => {
+      if (response.ok) {
+          return response.json();
+      }
+    }).catch((error) => {
+      throw new Error('FETCH ERROR:', error);
+    });
+  
+  const finalResponse = [];
+
+  if (emptyCheck(cases.data[typeValue]) && emptyCheck(recovered.data[typeValue]) && emptyCheck(deaths.data[typeValue])) {
+    let name = APItype === "states" ? cases.data[typeValue].name : (GermanyDistricts.find(obj => obj.code === typeValue)).name
+    for (let index = cases.data[typeValue].history.length; index > 0; --index) {
+      finalResponse.push({
+        cases: cases.data[typeValue].history[index -1].cases,
+        recovered: recovered.data[typeValue].history[index -1].recovered,
+        deaths: deaths.data[typeValue].history[index- 1].deaths,
+        date: new Date(cases.data[typeValue].history[index - 1].date).toLocaleDateString("de-DE", options),
+        name:name,
+      });
+    }
+    return finalResponse
+  } else {
+     AlertNotification();
+  }
 }
 
 const emptyCheck = (e) => {
@@ -187,8 +196,8 @@ const AlertNotification = () => {
 
 export {
   fetchDataGermany,
-  fetchDataStateALL,
-  fetchDataStatePerWeek,
+  fetchDataALL,
+  fetchDataPerWeek,
+  fetchDataAllDistricts,
   fetchDataAllState,
-  fetchDataAllDistricts
 }

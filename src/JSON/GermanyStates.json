@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Germany (States + Districts)",
+    "code": "all",
+    "group": "All"
+  },
+  {
+    "name": "Baden-Württemberg",
+    "code": "BW",
+    "group": "States"
+  },
+  {
+    "name": "Bayern",
+    "code": "BY",
+    "group": "States"
+  },
+  {
+    "name": "Berlin",
+    "code": "BE",
+    "group": "States"
+  },
+  {
+    "name": "Brandenburg",
+    "code": "BB",
+    "group": "States"
+  },
+  {
+    "name": "Bremen",
+    "code": "HB",
+    "group": "States"
+  },
+  {
+    "name": "Hamburg",
+    "code": "HH",
+    "group": "States"
+  },
+  {
+    "name": "Hessen",
+    "code": "HE",
+    "group": "States"
+  },
+  {
+    "name": "Mecklenburg-Vorpommern",
+    "code": "MV",
+    "group": "States"
+  },
+  {
+    "name": "Niedersachsen",
+    "code": "NI",
+    "group": "States"
+  },
+  {
+    "name": "Nordrhein-Westfalen",
+    "code": "NW",
+    "group": "States"
+  },
+  {
+    "name": "Rheinland-Pfalz",
+    "code": "RP",
+    "group": "States"
+  },
+  {
+    "name": "Saarland",
+    "code": "SL",
+    "group": "States"
+  },
+  {
+    "name": "Sachsen",
+    "code": "SN",
+    "group": "States"
+  },
+  {
+    "name": "Sachsen-Anhalt",
+    "code": "ST",
+    "group": "States"
+  },
+  {
+    "name": "Schleswig-Holstein",
+    "code": "SH",
+    "group": "States"
+  },
+  {
+    "name": "Thüringen",
+    "code": "TH",
+    "group": "States"
+  }
+]

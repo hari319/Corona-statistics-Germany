@@ -13,29 +13,31 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core';
-import { Context, SelectedState } from '../Context';
-import GermanyJSON from '../../JSON/germany.json';
+import { Context, SelectedCountryValue } from '../Context';
+import GermanyStates from '../../JSON/GermanyStates.json';
+import GermnayDistricts from '../../JSON/GermnayDistricts.json';
 import {
-  fetchDataStatePerWeek,
-  fetchDataStateALL,
-  fetchDataAllState,
+  fetchDataALL,
+  fetchDataPerWeek,
   fetchDataAllDistricts,
+  fetchDataAllState,
 } from '../../api/api';
-
-interface Germany {
-  name: string;
-  code: string;
-}
 
 const FormBuilder = () => {
   const { t } = useTranslation();
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('xs'));
-  const { setSelectedState, setWeeks, setStateData, setDistrictsData } =
-    useContext(Context);
-  const [countryPicker, setCountryPicker] = useState<SelectedState>({
+  const {
+    setSelectedState,
+    setWeeks,
+    setStateData,
+    setDistrictsData,
+    radioValue,
+  } = useContext(Context);
+  const [countryPicker, setCountryPicker] = useState<SelectedCountryValue>({
     name: '',
     code: '',
+    group: '',
   });
   const [countryPickerInput, setCountryPickerInput] = useState<string>();
   const [WeeksPicker, setWeeksPicker] = useState<string>('');
@@ -71,25 +73,33 @@ const FormBuilder = () => {
   const classes = useStyles();
 
   const handleOnClick = async () => {
-    let statesData: any = '';
+    let countryData: any = '';
     let districtsData: any = '';
-    if (countryPicker.name === 'Germany') {
-      statesData = await fetchDataAllState();
-      districtsData = await fetchDataAllDistricts();
-    } else if (WeeksPicker.toString() === '0') {
-      statesData = await fetchDataStateALL(countryPicker.code);
-    } else {
-      statesData = await fetchDataStatePerWeek(countryPicker.code, WeeksPicker);
+
+    switch (true) {
+      case countryPicker.code === 'all':
+        countryData = await fetchDataAllState();
+        districtsData = await fetchDataAllDistricts();
+        break;
+      case WeeksPicker.toString() === '0':
+        countryData = await fetchDataALL(radioValue, countryPicker.code);
+        break;
+      case WeeksPicker.toString() !== '0':
+        countryData = await fetchDataPerWeek(
+          radioValue,
+          countryPicker.code,
+          WeeksPicker
+        );
+        break;
     }
 
     if (districtsData !== '') {
       setDistrictsData(districtsData);
     }
-
-    setStateData(statesData);
+    setStateData(countryData);
     setWeeks(WeeksPicker);
     setSelectedState(countryPicker);
-    setCountryPicker({ name: '', code: '' });
+    setCountryPicker({ name: '', code: '', group: '' });
     setWeeksPicker('');
     setCountryPickerInput('');
   };
@@ -110,10 +120,15 @@ const FormBuilder = () => {
             inputValue={countryPickerInput}
             id="country-picker"
             style={{ width: 300 }}
-            options={GermanyJSON as Germany[]}
+            options={
+              radioValue === 'states'
+                ? (GermanyStates as SelectedCountryValue[])
+                : (GermnayDistricts as SelectedCountryValue[])
+            }
             classes={{
               option: classes.option,
             }}
+            groupBy={(option) => option.group}
             autoHighlight
             getOptionLabel={(option) => option.name}
             renderOption={(option) => (
@@ -128,7 +143,11 @@ const FormBuilder = () => {
             renderInput={(params) => (
               <TextField
                 {...params}
-                label={t('STATECHOSSE')}
+                label={
+                  radioValue === 'states'
+                    ? t('STATECHOSSE')
+                    : t('DISTRICTCHOSSE')
+                }
                 variant="outlined"
               />
             )}

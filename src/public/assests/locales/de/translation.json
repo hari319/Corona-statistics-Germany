@@ -7,6 +7,7 @@
   "DISTRICTS": "Landkreise",
   "CASES": "Fälle",
   "STATECHOSSE": "Wählen Sie ein Bundesland",
+  "DISTRICTCHOSSE": "Wählen Sie ein Landkreise",
   "HEADER": "COVID-19 Dashboard",
   "CONFIRM": "Infektionen",
   "RECOVERED": "Genesen",
@@ -17,5 +18,6 @@
   "TABLETAG": "COVID-19 Tracker liste für ",
   "WEEKS": "Wählen Sie eine Woche",
   "ALERT": "Es wurden keine Daten zurückgegeben!. Bitte versuchen Sie es später erneut.",
-  "CORONACARD": "CORONA-Tracker für Deutschland"
+  "CORONACARD": "CORONA-Tracker für Deutschland",
+  "RADIOTAG": "Wählen Sie den Ansichtstyp"
 }

@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useTranslation } from 'react-i18next';
 import { Paper } from '@material-ui/core';
-import { Context } from '../Context';
+import { Context, CountryData } from '../Context';
 import './Chart.css';
 
-const Chart = (props: { chartData: any; type: string }) => {
-  const { chartData, type } = props;
+const Chart = (props: { chartData: CountryData[] }) => {
+  const { chartData } = props;
   const { t } = useTranslation();
   const { selectedState } = useContext(Context);
   let Cases: number[] = [];
@@ -15,19 +15,17 @@ const Chart = (props: { chartData: any; type: string }) => {
   let Recovered: number[] = [];
   const value: number = 7;
 
-  function getLabel(e: any) {
+  function getLabel(e: CountryData) {
     switch (true) {
       case selectedState.code !== 'all':
         return e.date;
-      case type === 'state':
-        return e.state + ' ' + e.date;
-      case type === 'districts':
-        return e.districts + ' ' + e.date;
+      default:
+        return e.name + ' ' + e.date;
     }
   }
 
   chartData.length > 0 &&
-    chartData.forEach((e: any) => {
+    chartData.forEach((e: CountryData) => {
       Cases.push(e.cases);
       Label.push(getLabel(e));
       Deaths.push(e.deaths);
@@ -66,8 +64,6 @@ const Chart = (props: { chartData: any; type: string }) => {
 
   function getText() {
     switch (true) {
-      case type === 'districts':
-        return t('DISTRICTS');
       case selectedState.name === 'Germany':
         return t('GERMANYNAME');
       default:
