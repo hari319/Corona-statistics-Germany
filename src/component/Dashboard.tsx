@@ -7,6 +7,7 @@ import TableViewBuilder from './TableView/TableViewBuilder';
 import TableSelection from './TableView/TableSelection';
 import Loading from './Loading/Loading';
 import { fetchDataGermany } from '../api/api';
+import RadioSelection from './RadioSelection/RadioSelection';
 
 const Dashboard = () => {
   const { data, setData } = useContext(Context);
@@ -45,6 +46,7 @@ const Dashboard = () => {
     <>
       <Container component="main" maxWidth="lg">
         <Cards />
+        <RadioSelection />
         <TableViewBuilder />
         <TableSelection />
       </Container>

@@ -1,0 +1,2062 @@
+[
+  {
+    "name": "Stuttgart",
+    "code": "08111",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Böblingen",
+    "code": "08115",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Esslingen",
+    "code": "08116",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Göppingen",
+    "code": "08117",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Ludwigsburg",
+    "code": "08118",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Rems-Murr-Kreis",
+    "code": "08119",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Heilbronn",
+    "code": "08121",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Heilbronn",
+    "code": "08125",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Hohenlohekreis",
+    "code": "08126",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Schwäbisch Hall",
+    "code": "08127",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Main-Tauber-Kreis",
+    "code": "08128",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Heidenheim",
+    "code": "08135",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Ostalbkreis",
+    "code": "08136",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Baden-Baden",
+    "code": "08211",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Karlsruhe",
+    "code": "08212",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Karlsruhe",
+    "code": "08215",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Rastatt",
+    "code": "08216",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Heidelberg",
+    "code": "08221",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Mannheim",
+    "code": "08222",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Neckar-Odenwald-Kreis",
+    "code": "08225",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Rhein-Neckar-Kreis",
+    "code": "08226",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Pforzheim",
+    "code": "08231",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Calw",
+    "code": "08235",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Enzkreis",
+    "code": "08236",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Freudenstadt",
+    "code": "08237",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Freiburg im Breisgau",
+    "code": "08311",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Breisgau-Hochschwarzwald",
+    "code": "08315",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Emmendingen",
+    "code": "08316",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Ortenaukreis",
+    "code": "08317",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Rottweil",
+    "code": "08325",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Schwarzwald-Baar-Kreis",
+    "code": "08326",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Tuttlingen",
+    "code": "08327",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Konstanz",
+    "code": "08335",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Lörrach",
+    "code": "08336",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Waldshut",
+    "code": "08337",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Reutlingen",
+    "code": "08415",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Tübingen",
+    "code": "08416",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Zollernalbkreis",
+    "code": "08417",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Ulm",
+    "code": "08421",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Alb-Donau-Kreis",
+    "code": "08425",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Biberach",
+    "code": "08426",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Bodenseekreis",
+    "code": "08435",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Ravensburg",
+    "code": "08436",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Sigmaringen",
+    "code": "08437",
+    "group": "Baden-Württemberg"
+  },
+  {
+    "name": "Ingolstadt",
+    "code": "09161",
+    "group": "Bayern"
+  },
+  {
+    "name": "München",
+    "code": "09162",
+    "group": "Bayern"
+  },
+  {
+    "name": "Rosenheim",
+    "code": "09163",
+    "group": "Bayern"
+  },
+  {
+    "name": "Altötting",
+    "code": "09171",
+    "group": "Bayern"
+  },
+  {
+    "name": "Berchtesgadener Land",
+    "code": "09172",
+    "group": "Bayern"
+  },
+  {
+    "name": "Bad Tölz-Wolfratshausen",
+    "code": "09173",
+    "group": "Bayern"
+  },
+  {
+    "name": "Dachau",
+    "code": "09174",
+    "group": "Bayern"
+  },
+  {
+    "name": "Ebersberg",
+    "code": "09175",
+    "group": "Bayern"
+  },
+  {
+    "name": "Eichstätt",
+    "code": "09176",
+    "group": "Bayern"
+  },
+  {
+    "name": "Erding",
+    "code": "09177",
+    "group": "Bayern"
+  },
+  {
+    "name": "Freising",
+    "code": "09178",
+    "group": "Bayern"
+  },
+  {
+    "name": "Fürstenfeldbruck",
+    "code": "09179",
+    "group": "Bayern"
+  },
+  {
+    "name": "Garmisch-Partenkirchen",
+    "code": "09180",
+    "group": "Bayern"
+  },
+  {
+    "name": "Landsberg am Lech",
+    "code": "09181",
+    "group": "Bayern"
+  },
+  {
+    "name": "Miesbach",
+    "code": "09182",
+    "group": "Bayern"
+  },
+  {
+    "name": "Mühldorf a. Inn",
+    "code": "09183",
+    "group": "Bayern"
+  },
+  {
+    "name": "München",
+    "code": "09184",
+    "group": "Bayern"
+  },
+  {
+    "name": "Neuburg-Schrobenhausen",
+    "code": "09185",
+    "group": "Bayern"
+  },
+  {
+    "name": "Pfaffenhofen a.d. Ilm",
+    "code": "09186",
+    "group": "Bayern"
+  },
+  {
+    "name": "Rosenheim",
+    "code": "09187",
+    "group": "Bayern"
+  },
+  {
+    "name": "Starnberg",
+    "code": "09188",
+    "group": "Bayern"
+  },
+  {
+    "name": "Traunstein",
+    "code": "09189",
+    "group": "Bayern"
+  },
+  {
+    "name": "Weilheim-Schongau",
+    "code": "09190",
+    "group": "Bayern"
+  },
+  {
+    "name": "Landshut",
+    "code": "09261",
+    "group": "Bayern"
+  },
+  {
+    "name": "Passau",
+    "code": "09262",
+    "group": "Bayern"
+  },
+  {
+    "name": "Straubing",
+    "code": "09263",
+    "group": "Bayern"
+  },
+  {
+    "name": "Deggendorf",
+    "code": "09271",
+    "group": "Bayern"
+  },
+  {
+    "name": "Freyung-Grafenau",
+    "code": "09272",
+    "group": "Bayern"
+  },
+  {
+    "name": "Kelheim",
+    "code": "09273",
+    "group": "Bayern"
+  },
+  {
+    "name": "Landshut",
+    "code": "09274",
+    "group": "Bayern"
+  },
+  {
+    "name": "Passau",
+    "code": "09275",
+    "group": "Bayern"
+  },
+  {
+    "name": "Regen",
+    "code": "09276",
+    "group": "Bayern"
+  },
+  {
+    "name": "Rottal-Inn",
+    "code": "09277",
+    "group": "Bayern"
+  },
+  {
+    "name": "Straubing-Bogen",
+    "code": "09278",
+    "group": "Bayern"
+  },
+  {
+    "name": "Dingolfing-Landau",
+    "code": "09279",
+    "group": "Bayern"
+  },
+  {
+    "name": "Amberg",
+    "code": "09361",
+    "group": "Bayern"
+  },
+  {
+    "name": "Regensburg",
+    "code": "09362",
+    "group": "Bayern"
+  },
+  {
+    "name": "Weiden i.d. OPf.",
+    "code": "09363",
+    "group": "Bayern"
+  },
+  {
+    "name": "Amberg-Sulzbach",
+    "code": "09371",
+    "group": "Bayern"
+  },
+  {
+    "name": "Cham",
+    "code": "09372",
+    "group": "Bayern"
+  },
+  {
+    "name": "Neumarkt i.d. OPf.",
+    "code": "09373",
+    "group": "Bayern"
+  },
+  {
+    "name": "Neustadt a.d. Waldnaab",
+    "code": "09374",
+    "group": "Bayern"
+  },
+  {
+    "name": "Regensburg",
+    "code": "09375",
+    "group": "Bayern"
+  },
+  {
+    "name": "Schwandorf",
+    "code": "09376",
+    "group": "Bayern"
+  },
+  {
+    "name": "Tirschenreuth",
+    "code": "09377",
+    "group": "Bayern"
+  },
+  {
+    "name": "Bamberg",
+    "code": "09461",
+    "group": "Bayern"
+  },
+  {
+    "name": "Bayreuth",
+    "code": "09462",
+    "group": "Bayern"
+  },
+  {
+    "name": "Coburg",
+    "code": "09463",
+    "group": "Bayern"
+  },
+  {
+    "name": "Hof",
+    "code": "09464",
+    "group": "Bayern"
+  },
+  {
+    "name": "Bamberg",
+    "code": "09471",
+    "group": "Bayern"
+  },
+  {
+    "name": "Bayreuth",
+    "code": "09472",
+    "group": "Bayern"
+  },
+  {
+    "name": "Coburg",
+    "code": "09473",
+    "group": "Bayern"
+  },
+  {
+    "name": "Forchheim",
+    "code": "09474",
+    "group": "Bayern"
+  },
+  {
+    "name": "Hof",
+    "code": "09475",
+    "group": "Bayern"
+  },
+  {
+    "name": "Kronach",
+    "code": "09476",
+    "group": "Bayern"
+  },
+  {
+    "name": "Kulmbach",
+    "code": "09477",
+    "group": "Bayern"
+  },
+  {
+    "name": "Lichtenfels",
+    "code": "09478",
+    "group": "Bayern"
+  },
+  {
+    "name": "Wunsiedel i. Fichtelgebirge",
+    "code": "09479",
+    "group": "Bayern"
+  },
+  {
+    "name": "Ansbach",
+    "code": "09561",
+    "group": "Bayern"
+  },
+  {
+    "name": "Erlangen",
+    "code": "09562",
+    "group": "Bayern"
+  },
+  {
+    "name": "Fürth",
+    "code": "09563",
+    "group": "Bayern"
+  },
+  {
+    "name": "Nürnberg",
+    "code": "09564",
+    "group": "Bayern"
+  },
+  {
+    "name": "Schwabach",
+    "code": "09565",
+    "group": "Bayern"
+  },
+  {
+    "name": "Ansbach",
+    "code": "09571",
+    "group": "Bayern"
+  },
+  {
+    "name": "Erlangen-Höchstadt",
+    "code": "09572",
+    "group": "Bayern"
+  },
+  {
+    "name": "Fürth",
+    "code": "09573",
+    "group": "Bayern"
+  },
+  {
+    "name": "Nürnberger Land",
+    "code": "09574",
+    "group": "Bayern"
+  },
+  {
+    "name": "Neustadt a.d. Aisch-Bad Windsheim",
+    "code": "09575",
+    "group": "Bayern"
+  },
+  {
+    "name": "Roth",
+    "code": "09576",
+    "group": "Bayern"
+  },
+  {
+    "name": "Weißenburg-Gunzenhausen",
+    "code": "09577",
+    "group": "Bayern"
+  },
+  {
+    "name": "Aschaffenburg",
+    "code": "09661",
+    "group": "Bayern"
+  },
+  {
+    "name": "Schweinfurt",
+    "code": "09662",
+    "group": "Bayern"
+  },
+  {
+    "name": "Würzburg",
+    "code": "09663",
+    "group": "Bayern"
+  },
+  {
+    "name": "Aschaffenburg",
+    "code": "09671",
+    "group": "Bayern"
+  },
+  {
+    "name": "Bad Kissingen",
+    "code": "09672",
+    "group": "Bayern"
+  },
+  {
+    "name": "Rhön-Grabfeld",
+    "code": "09673",
+    "group": "Bayern"
+  },
+  {
+    "name": "Haßberge",
+    "code": "09674",
+    "group": "Bayern"
+  },
+  {
+    "name": "Kitzingen",
+    "code": "09675",
+    "group": "Bayern"
+  },
+  {
+    "name": "Miltenberg",
+    "code": "09676",
+    "group": "Bayern"
+  },
+  {
+    "name": "Main-Spessart",
+    "code": "09677",
+    "group": "Bayern"
+  },
+  {
+    "name": "Schweinfurt",
+    "code": "09678",
+    "group": "Bayern"
+  },
+  {
+    "name": "Würzburg",
+    "code": "09679",
+    "group": "Bayern"
+  },
+  {
+    "name": "Augsburg",
+    "code": "09761",
+    "group": "Bayern"
+  },
+  {
+    "name": "Kaufbeuren",
+    "code": "09762",
+    "group": "Bayern"
+  },
+  {
+    "name": "Kempten (Allgäu)",
+    "code": "09763",
+    "group": "Bayern"
+  },
+  {
+    "name": "Memmingen",
+    "code": "09764",
+    "group": "Bayern"
+  },
+  {
+    "name": "Aichach-Friedberg",
+    "code": "09771",
+    "group": "Bayern"
+  },
+  {
+    "name": "Augsburg",
+    "code": "09772",
+    "group": "Bayern"
+  },
+  {
+    "name": "Dillingen a.d. Donau",
+    "code": "09773",
+    "group": "Bayern"
+  },
+  {
+    "name": "Günzburg",
+    "code": "09774",
+    "group": "Bayern"
+  },
+  {
+    "name": "Neu-Ulm",
+    "code": "09775",
+    "group": "Bayern"
+  },
+  {
+    "name": "Lindau (Bodensee)",
+    "code": "09776",
+    "group": "Bayern"
+  },
+  {
+    "name": "Ostallgäu",
+    "code": "09777",
+    "group": "Bayern"
+  },
+  {
+    "name": "Unterallgäu",
+    "code": "09778",
+    "group": "Bayern"
+  },
+  {
+    "name": "Donau-Ries",
+    "code": "09779",
+    "group": "Bayern"
+  },
+  {
+    "name": "Oberallgäu",
+    "code": "09780",
+    "group": "Bayern"
+  },
+  {
+    "name": "Berlin Mitte",
+    "code": "11001",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Friedrichshain-Kreuzberg",
+    "code": "11002",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Pankow",
+    "code": "11003",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Charlottenburg-Wilmersdorf",
+    "code": "11004",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Spandau",
+    "code": "11005",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Steglitz-Zehlendorf",
+    "code": "11006",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Tempelhof-Schöneberg",
+    "code": "11007",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Neukölln",
+    "code": "11008",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Treptow-Köpenick",
+    "code": "11009",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Marzahn-Hellersdorf",
+    "code": "11010",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Lichtenberg",
+    "code": "11011",
+    "group": "Berlin"
+  },
+  {
+    "name": "Berlin Reinickendorf",
+    "code": "11012",
+    "group": "Berlin"
+  },
+  {
+    "name": "Brandenburg an der Havel",
+    "code": "12051",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Cottbus",
+    "code": "12052",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Frankfurt (Oder)",
+    "code": "12053",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Potsdam",
+    "code": "12054",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Barnim",
+    "code": "12060",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Dahme-Spreewald",
+    "code": "12061",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Elbe-Elster",
+    "code": "12062",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Havelland",
+    "code": "12063",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Märkisch-Oderland",
+    "code": "12064",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Oberhavel",
+    "code": "12065",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Oberspreewald-Lausitz",
+    "code": "12066",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Oder-Spree",
+    "code": "12067",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Ostprignitz-Ruppin",
+    "code": "12068",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Potsdam-Mittelmark",
+    "code": "12069",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Prignitz",
+    "code": "12070",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Spree-Neiße",
+    "code": "12071",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Teltow-Fläming",
+    "code": "12072",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Uckermark",
+    "code": "12073",
+    "group": "Brandenburg"
+  },
+  {
+    "name": "Bremen",
+    "code": "04011",
+    "group": "Bremen"
+  },
+  {
+    "name": "Bremerhaven",
+    "code": "04012",
+    "group": "Bremen"
+  },
+  {
+    "name": "Hamburg",
+    "code": "02000",
+    "group": "Hamburg"
+  },
+  {
+    "name": "Darmstadt",
+    "code": "06411",
+    "group": "Hessen"
+  },
+  {
+    "name": "Frankfurt am Main",
+    "code": "06412",
+    "group": "Hessen"
+  },
+  {
+    "name": "Offenbach am Main",
+    "code": "06413",
+    "group": "Hessen"
+  },
+  {
+    "name": "Wiesbaden",
+    "code": "06414",
+    "group": "Hessen"
+  },
+  {
+    "name": "Bergstraße",
+    "code": "06431",
+    "group": "Hessen"
+  },
+  {
+    "name": "Darmstadt-Dieburg",
+    "code": "06432",
+    "group": "Hessen"
+  },
+  {
+    "name": "Groß-Gerau",
+    "code": "06433",
+    "group": "Hessen"
+  },
+  {
+    "name": "Hochtaunuskreis",
+    "code": "06434",
+    "group": "Hessen"
+  },
+  {
+    "name": "Main-Kinzig-Kreis",
+    "code": "06435",
+    "group": "Hessen"
+  },
+  {
+    "name": "Main-Taunus-Kreis",
+    "code": "06436",
+    "group": "Hessen"
+  },
+  {
+    "name": "Odenwaldkreis",
+    "code": "06437",
+    "group": "Hessen"
+  },
+  {
+    "name": "Offenbach",
+    "code": "06438",
+    "group": "Hessen"
+  },
+  {
+    "name": "Rheingau-Taunus-Kreis",
+    "code": "06439",
+    "group": "Hessen"
+  },
+  {
+    "name": "Wetteraukreis",
+    "code": "06440",
+    "group": "Hessen"
+  },
+  {
+    "name": "Gießen",
+    "code": "06531",
+    "group": "Hessen"
+  },
+  {
+    "name": "Lahn-Dill-Kreis",
+    "code": "06532",
+    "group": "Hessen"
+  },
+  {
+    "name": "Limburg-Weilburg",
+    "code": "06533",
+    "group": "Hessen"
+  },
+  {
+    "name": "Marburg-Biedenkopf",
+    "code": "06534",
+    "group": "Hessen"
+  },
+  {
+    "name": "Vogelsbergkreis",
+    "code": "06535",
+    "group": "Hessen"
+  },
+  {
+    "name": "Kassel",
+    "code": "06611",
+    "group": "Hessen"
+  },
+  {
+    "name": "Fulda",
+    "code": "06631",
+    "group": "Hessen"
+  },
+  {
+    "name": "Hersfeld-Rotenburg",
+    "code": "06632",
+    "group": "Hessen"
+  },
+  {
+    "name": "Kassel",
+    "code": "06633",
+    "group": "Hessen"
+  },
+  {
+    "name": "Schwalm-Eder-Kreis",
+    "code": "06634",
+    "group": "Hessen"
+  },
+  {
+    "name": "Waldeck-Frankenberg",
+    "code": "06635",
+    "group": "Hessen"
+  },
+  {
+    "name": "Werra-Meißner-Kreis",
+    "code": "06636",
+    "group": "Hessen"
+  },
+  {
+    "name": "Rostock",
+    "code": "13003",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Schwerin",
+    "code": "13004",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Mecklenburgische Seenplatte",
+    "code": "13071",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Rostock",
+    "code": "13072",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Vorpommern-Rügen",
+    "code": "13073",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Nordwestmecklenburg",
+    "code": "13074",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Vorpommern-Greifswald",
+    "code": "13075",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Ludwigslust-Parchim",
+    "code": "13076",
+    "group": "Mecklenburg-Vorpommern"
+  },
+  {
+    "name": "Braunschweig",
+    "code": "03101",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Salzgitter",
+    "code": "03102",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Wolfsburg",
+    "code": "03103",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Gifhorn",
+    "code": "03151",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Goslar",
+    "code": "03153",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Helmstedt",
+    "code": "03154",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Northeim",
+    "code": "03155",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Peine",
+    "code": "03157",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Wolfenbüttel",
+    "code": "03158",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Göttingen",
+    "code": "03159",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Region Hannover",
+    "code": "03241",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Diepholz",
+    "code": "03251",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Hameln-Pyrmont",
+    "code": "03252",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Hildesheim",
+    "code": "03254",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Holzminden",
+    "code": "03255",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Nienburg (Weser)",
+    "code": "03256",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Schaumburg",
+    "code": "03257",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Celle",
+    "code": "03351",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Cuxhaven",
+    "code": "03352",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Harburg",
+    "code": "03353",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Lüchow-Dannenberg",
+    "code": "03354",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Lüneburg",
+    "code": "03355",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Osterholz",
+    "code": "03356",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Rotenburg (Wümme)",
+    "code": "03357",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Heidekreis",
+    "code": "03358",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Stade",
+    "code": "03359",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Uelzen",
+    "code": "03360",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Verden",
+    "code": "03361",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Delmenhorst",
+    "code": "03401",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Emden",
+    "code": "03402",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Oldenburg (Oldb)",
+    "code": "03403",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Osnabrück",
+    "code": "03404",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Wilhelmshaven",
+    "code": "03405",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Ammerland",
+    "code": "03451",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Aurich",
+    "code": "03452",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Cloppenburg",
+    "code": "03453",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Emsland",
+    "code": "03454",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Friesland",
+    "code": "03455",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Grafschaft Bentheim",
+    "code": "03456",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Leer",
+    "code": "03457",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Oldenburg",
+    "code": "03458",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Osnabrück",
+    "code": "03459",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Vechta",
+    "code": "03460",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Wesermarsch",
+    "code": "03461",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Wittmund",
+    "code": "03462",
+    "group": "Niedersachsen"
+  },
+  {
+    "name": "Düsseldorf",
+    "code": "05111",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Duisburg",
+    "code": "05112",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Essen",
+    "code": "05113",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Krefeld",
+    "code": "05114",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Mönchengladbach",
+    "code": "05116",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Mülheim an der Ruhr",
+    "code": "05117",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Oberhausen",
+    "code": "05119",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Remscheid",
+    "code": "05120",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Solingen",
+    "code": "05122",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Wuppertal",
+    "code": "05124",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Kleve",
+    "code": "05154",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Mettmann",
+    "code": "05158",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Rhein-Kreis Neuss",
+    "code": "05162",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Viersen",
+    "code": "05166",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Wesel",
+    "code": "05170",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Bonn",
+    "code": "05314",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Köln",
+    "code": "05315",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Leverkusen",
+    "code": "05316",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Städteregion Aachen",
+    "code": "05334",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Düren",
+    "code": "05358",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Rhein-Erft-Kreis",
+    "code": "05362",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Euskirchen",
+    "code": "05366",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Heinsberg",
+    "code": "05370",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Oberbergischer Kreis",
+    "code": "05374",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Rheinisch-Bergischer Kreis",
+    "code": "05378",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Rhein-Sieg-Kreis",
+    "code": "05382",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Bottrop",
+    "code": "05512",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Gelsenkirchen",
+    "code": "05513",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Münster",
+    "code": "05515",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Borken",
+    "code": "05554",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Coesfeld",
+    "code": "05558",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Recklinghausen",
+    "code": "05562",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Steinfurt",
+    "code": "05566",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Warendorf",
+    "code": "05570",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Bielefeld",
+    "code": "05711",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Gütersloh",
+    "code": "05754",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Herford",
+    "code": "05758",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Höxter",
+    "code": "05762",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Lippe",
+    "code": "05766",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Minden-Lübbecke",
+    "code": "05770",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Paderborn",
+    "code": "05774",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Bochum",
+    "code": "05911",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Dortmund",
+    "code": "05913",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Hagen",
+    "code": "05914",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Hamm",
+    "code": "05915",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Herne",
+    "code": "05916",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Ennepe-Ruhr-Kreis",
+    "code": "05954",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Hochsauerlandkreis",
+    "code": "05958",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Märkischer Kreis",
+    "code": "05962",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Olpe",
+    "code": "05966",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Siegen-Wittgenstein",
+    "code": "05970",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Soest",
+    "code": "05974",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Unna",
+    "code": "05978",
+    "group": "Nordrhein-Westfalen"
+  },
+  {
+    "name": "Koblenz",
+    "code": "07111",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Ahrweiler",
+    "code": "07131",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Altenkirchen (Westerwald)",
+    "code": "07132",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Bad Kreuznach",
+    "code": "07133",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Birkenfeld",
+    "code": "07134",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Cochem-Zell",
+    "code": "07135",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Mayen-Koblenz",
+    "code": "07137",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Neuwied",
+    "code": "07138",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Rhein-Hunsrück-Kreis",
+    "code": "07140",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Rhein-Lahn-Kreis",
+    "code": "07141",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Westerwaldkreis",
+    "code": "07143",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Trier",
+    "code": "07211",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Bernkastel-Wittlich",
+    "code": "07231",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Eifelkreis Bitburg-Prüm",
+    "code": "07232",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Vulkaneifel",
+    "code": "07233",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Trier-Saarburg",
+    "code": "07235",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Frankenthal (Pfalz)",
+    "code": "07311",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Kaiserslautern",
+    "code": "07312",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Landau in der Pfalz",
+    "code": "07313",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Ludwigshafen am Rhein",
+    "code": "07314",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Mainz",
+    "code": "07315",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Neustadt an der Weinstraße",
+    "code": "07316",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Pirmasens",
+    "code": "07317",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Speyer",
+    "code": "07318",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Worms",
+    "code": "07319",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Zweibrücken",
+    "code": "07320",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Alzey-Worms",
+    "code": "07331",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Bad Dürkheim",
+    "code": "07332",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Donnersbergkreis",
+    "code": "07333",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Germersheim",
+    "code": "07334",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Kaiserslautern",
+    "code": "07335",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Kusel",
+    "code": "07336",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Südliche Weinstraße",
+    "code": "07337",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Rhein-Pfalz-Kreis",
+    "code": "07338",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Mainz-Bingen",
+    "code": "07339",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Südwestpfalz",
+    "code": "07340",
+    "group": "Rheinland-Pfalz"
+  },
+  {
+    "name": "Regionalverband Saarbrücken",
+    "code": "10041",
+    "group": "Saarland"
+  },
+  {
+    "name": "Merzig-Wadern",
+    "code": "10042",
+    "group": "Saarland"
+  },
+  {
+    "name": "Neunkirchen",
+    "code": "10043",
+    "group": "Saarland"
+  },
+  {
+    "name": "Saarlouis",
+    "code": "10044",
+    "group": "Saarland"
+  },
+  {
+    "name": "Saarpfalz-Kreis",
+    "code": "10045",
+    "group": "Saarland"
+  },
+  {
+    "name": "St. Wendel",
+    "code": "10046",
+    "group": "Saarland"
+  },
+  {
+    "name": "Chemnitz",
+    "code": "14511",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Erzgebirgskreis",
+    "code": "14521",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Mittelsachsen",
+    "code": "14522",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Vogtlandkreis",
+    "code": "14523",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Zwickau",
+    "code": "14524",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Dresden",
+    "code": "14612",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Bautzen",
+    "code": "14625",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Görlitz",
+    "code": "14626",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Meißen",
+    "code": "14627",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Sächsische Schweiz-Osterzgebirge",
+    "code": "14628",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Leipzig",
+    "code": "14713",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Leipzig",
+    "code": "14729",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Nordsachsen",
+    "code": "14730",
+    "group": "Sachsen"
+  },
+  {
+    "name": "Dessau-Roßlau",
+    "code": "15001",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Halle (Saale)",
+    "code": "15002",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Magdeburg",
+    "code": "15003",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Altmarkkreis Salzwedel",
+    "code": "15081",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Anhalt-Bitterfeld",
+    "code": "15082",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Börde",
+    "code": "15083",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Burgenlandkreis",
+    "code": "15084",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Harz",
+    "code": "15085",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Jerichower Land",
+    "code": "15086",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Mansfeld-Südharz",
+    "code": "15087",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Saalekreis",
+    "code": "15088",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Salzlandkreis",
+    "code": "15089",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Stendal",
+    "code": "15090",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Wittenberg",
+    "code": "15091",
+    "group": "Sachsen-Anhalt"
+  },
+  {
+    "name": "Flensburg",
+    "code": "01001",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Kiel",
+    "code": "01002",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Lübeck",
+    "code": "01003",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Neumünster",
+    "code": "01004",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Dithmarschen",
+    "code": "01051",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Herzogtum Lauenburg",
+    "code": "01053",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Nordfriesland",
+    "code": "01054",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Ostholstein",
+    "code": "01055",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Pinneberg",
+    "code": "01056",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Plön",
+    "code": "01057",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Rendsburg-Eckernförde",
+    "code": "01058",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Schleswig-Flensburg",
+    "code": "01059",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Segeberg",
+    "code": "01060",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Steinburg",
+    "code": "01061",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Stormarn",
+    "code": "01062",
+    "group": "Schleswig-Holstein"
+  },
+  {
+    "name": "Erfurt",
+    "code": "16051",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Gera",
+    "code": "16052",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Jena",
+    "code": "16053",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Suhl",
+    "code": "16054",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Weimar",
+    "code": "16055",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Eisenach",
+    "code": "16056",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Eichsfeld",
+    "code": "16061",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Nordhausen",
+    "code": "16062",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Wartburgkreis",
+    "code": "16063",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Unstrut-Hainich-Kreis",
+    "code": "16064",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Kyffhäuserkreis",
+    "code": "16065",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Schmalkalden-Meiningen",
+    "code": "16066",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Gotha",
+    "code": "16067",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Sömmerda",
+    "code": "16068",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Hildburghausen",
+    "code": "16069",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Ilm-Kreis",
+    "code": "16070",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Weimarer Land",
+    "code": "16071",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Sonneberg",
+    "code": "16072",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Saalfeld-Rudolstadt",
+    "code": "16073",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Saale-Holzland-Kreis",
+    "code": "16074",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Saale-Orla-Kreis",
+    "code": "16075",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Greiz",
+    "code": "16076",
+    "group": "Thüringen"
+  },
+  {
+    "name": "Altenburger Land",
+    "code": "16077",
+    "group": "Thüringen"
+  }
+]

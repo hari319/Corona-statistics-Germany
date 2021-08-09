@@ -2,34 +2,34 @@
 import React, { useContext, useEffect } from 'react';
 import TableView from './TableView';
 import TableViewCollapse from './TableViewCollapse';
-import { Context, StateData, DistrictsData } from '../Context';
+import { Context, CountryData } from '../Context';
 
 function createData(
   date: Date,
   cases: number,
   recovered: number,
   deaths: number,
-  state: string
-): StateData {
-  return { date, cases, recovered, deaths, state };
+  name: string
+): CountryData {
+  return { date, cases, recovered, deaths, name };
 }
 
 const TableSelection = () => {
-  const { selectedState, weeks, stateData, districtsData } =
+  const { selectedState, weeks, stateData, districtsData, radioValue } =
     useContext(Context);
-  const [rowsState, setRowsState] = React.useState<StateData[]>([]);
-  const [rowsDistricts, setDistricts] = React.useState<DistrictsData[]>([]);
+  const [rowsState, setRowsState] = React.useState<CountryData[]>([]);
+  const [rowsDistricts, setDistricts] = React.useState<CountryData[]>([]);
 
   const setState = () => {
     if (Array.isArray(stateData)) {
       stateData.forEach((e) => {
         setRowsState((row) => [
           ...row,
-          createData(e.date, e.cases, e.recovered, e.deaths, e.state),
+          createData(e.date, e.cases, e.recovered, e.deaths, e.name),
         ]);
       });
     } else {
-      let newTableData: any = stateData;
+      let newTableData: CountryData = stateData;
       var today: any = new Date().toLocaleDateString('de-DE', {
         year: 'numeric',
         month: '2-digit',
@@ -59,7 +59,7 @@ const TableSelection = () => {
   return selectedState.code === 'all' && weeks.toString() === '0' ? (
     <TableViewCollapse rows={rowsState} rowsDistricts={rowsDistricts} />
   ) : (
-    <TableView rows={rowsState} type={'state'} />
+    <TableView rows={rowsState} type={radioValue} />
   );
 };
 

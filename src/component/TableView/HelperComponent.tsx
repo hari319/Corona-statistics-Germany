@@ -25,7 +25,8 @@ export const StyledTableRow = withStyles((theme: Theme) =>
 )(TableRow);
 
 export const getImage = (name: string, type: string) => {
-  const URL = type === 'state' ? StateImageUrl[name] : districts[name];
+  const URL = type === 'states' ? StateImageUrl[name] : districts[name];
+
   return (
     <>
       <img alt={name} src={URL} height="30px" />

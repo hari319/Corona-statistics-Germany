@@ -1,0 +1,11 @@
+.radio {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: -42px;
+}
+
+.radioSelection {
+  justify-content: center;
+  margin-top: -13px;
+}

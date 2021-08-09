@@ -1,24 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { createContext, useState, FunctionComponent } from 'react';
 
-export interface SelectedState {
+export interface SelectedCountryValue {
   name: string;
   code: string;
+  group: string;
 }
-export interface StateData {
+export interface CountryData {
   cases: number;
   recovered: number;
   deaths: number;
   date: Date;
-  state: string;
-}
-
-export interface DistrictsData {
-  cases: number;
-  recovered: number;
-  deaths: number;
-  date: Date;
-  districts: string;
+  name: string;
 }
 
 export interface Data {
@@ -29,30 +22,35 @@ export interface Data {
 }
 
 export const Context = createContext<{
-  setSelectedState: (value: SelectedState) => void;
+  setSelectedState: (value: SelectedCountryValue) => void;
   setWeeks: (value: string) => void;
   setData: (value: Data[]) => void;
-  setStateData: (value: StateData[]) => void;
-  setDistrictsData: (value: DistrictsData[]) => void;
-  selectedState: SelectedState;
+  setStateData: (value: CountryData[]) => void;
+  setDistrictsData: (value: CountryData[]) => void;
+  setRadioValue: (value: string) => void;
+  selectedState: SelectedCountryValue;
   weeks: string;
-  stateData: StateData[];
-  districtsData: DistrictsData[];
+  stateData: CountryData[];
+  districtsData: CountryData[];
   data: Data[];
+  radioValue: string;
 }>({
   setSelectedState: () => {},
   setData: () => {},
   setWeeks: () => {},
   setStateData: () => {},
   setDistrictsData: () => {},
+  setRadioValue: () => {},
   selectedState: {
     name: '',
     code: '',
+    group: '',
   },
   weeks: '',
   data: [],
   stateData: [],
   districtsData: [],
+  radioValue: '',
 });
 
 const ContextProvider: FunctionComponent<any> = ({ children }) => {
@@ -61,13 +59,15 @@ const ContextProvider: FunctionComponent<any> = ({ children }) => {
 
 const Auth = () => {
   const [data, setData] = useState<Data[]>([]);
-  const [selectedState, setSelectedState] = useState<SelectedState>({
+  const [selectedState, setSelectedState] = useState<SelectedCountryValue>({
     name: '',
     code: '',
+    group: '',
   });
-  const [stateData, setStateData] = useState<StateData[]>([]);
-  const [districtsData, setDistrictsData] = useState<DistrictsData[]>([]);
+  const [stateData, setStateData] = useState<CountryData[]>([]);
+  const [districtsData, setDistrictsData] = useState<CountryData[]>([]);
   const [weeks, setWeeks] = useState<string>('');
+  const [radioValue, setRadioValue] = useState<string>('states');
 
   return {
     selectedState,
@@ -75,11 +75,13 @@ const Auth = () => {
     stateData,
     data,
     districtsData,
+    radioValue,
     setSelectedState,
     setData,
     setWeeks,
     setStateData,
     setDistrictsData,
+    setRadioValue,
   };
 };
 

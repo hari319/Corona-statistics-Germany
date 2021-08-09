@@ -9,13 +9,13 @@ import {
   TablePagination,
 } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-import { StateData, Context } from '../Context';
+import { CountryData, Context } from '../Context';
 import { StyledTableRow, StyledTableCell, getImage } from './HelperComponent';
 import styles from './TableView.module.css';
 import Chart from '../Chart/Chart';
 
 interface Column {
-  id: 'state' | 'date' | 'cases' | 'recovered' | 'deaths';
+  id: 'name' | 'date' | 'cases' | 'recovered' | 'deaths';
   label: string;
   minWidth?: number;
   align?: 'right';
@@ -23,7 +23,7 @@ interface Column {
 }
 
 interface TableViewProps {
-  rows: StateData[];
+  rows: CountryData[];
   type: string;
 }
 
@@ -31,13 +31,13 @@ const TableView: React.FC<TableViewProps> = ({ rows, type }) => {
   const { t } = useTranslation();
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const typeBool: boolean = type === 'state';
+  const typeBool: boolean = type === 'states';
   const { selectedState } = useContext(Context);
-  const [chartData, setChartData] = useState<any[]>([]);
+  const [chartData, setChartData] = useState<CountryData[]>([]);
 
   const columns: Column[] = [
     {
-      id: 'state',
+      id: 'name',
       label: typeBool ? t('STATE') : t('DISTRICTS'),
       minWidth: 170,
     },
@@ -69,10 +69,10 @@ const TableView: React.FC<TableViewProps> = ({ rows, type }) => {
   };
 
   useEffect(() => {
-    let data: any[] = [];
+    let data: CountryData[] = [];
     rows
       .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-      .forEach((row: any, i) => {
+      .forEach((row: CountryData, i) => {
         data.push(row);
       });
     setChartData(data);
@@ -82,8 +82,7 @@ const TableView: React.FC<TableViewProps> = ({ rows, type }) => {
     <>
       <Paper className={styles.paper}>
         <h1 className={styles.h1}>
-          {t('TABLETAG')}
-          {type === 'state' ? selectedState.name : t('DISTRICTS')}
+          {t('TABLETAG')} {selectedState.name}
         </h1>
         <TableContainer className={styles.container}>
           <Table stickyHeader aria-label="sticky table">
@@ -103,23 +102,15 @@ const TableView: React.FC<TableViewProps> = ({ rows, type }) => {
             <TableBody>
               {rows
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row: any, i) => {
+                .map((row: CountryData, i) => {
                   return (
                     <StyledTableRow hover role="checkbox" tabIndex={-1} key={i}>
                       {columns.map((column: Column, index: number) => {
-                        const value =
-                          row[
-                            index === 0 && type !== 'state'
-                              ? 'districts'
-                              : column.id
-                          ];
+                        const value = row[column.id];
                         return (
                           <StyledTableCell key={column.id} align={'center'}>
-                            {column.id === 'state' &&
-                              getImage(
-                                row[typeBool ? 'state' : 'districts'],
-                                type
-                              )}
+                            {column.id === 'name' &&
+                              getImage(row['name'], type)}
                             {column.format && typeof value === 'number'
                               ? column.format(value)
                               : value}
@@ -142,7 +133,7 @@ const TableView: React.FC<TableViewProps> = ({ rows, type }) => {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-      <Chart chartData={chartData} type={type} />
+      <Chart chartData={chartData} />
     </>
   ) : (
     <></>
