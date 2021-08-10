@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -73,6 +73,11 @@ const FormBuilder = () => {
 
   const classes = useStyles();
 
+  useEffect(() => {
+    setCountryPicker({ name: '', code: '', group: '' });
+    setCountryPickerInput('');
+  }, [radioValue]);
+
   const handleOnClick = async () => {
     let countryData: any = '';
     let districtsData: any = '';
@@ -102,9 +107,7 @@ const FormBuilder = () => {
     setStateData(countryData);
     setWeeks(WeeksPicker);
     setSelectedState(countryPicker);
-    setCountryPicker({ name: '', code: '', group: '' });
     setWeeksPicker('');
-    setCountryPickerInput('');
   };
 
   return (
@@ -139,7 +142,11 @@ const FormBuilder = () => {
                 <span>{option.name}</span>
               </React.Fragment>
             )}
-            onChange={(e, value) => value && setCountryPicker(value)}
+            onChange={(e, value) => {
+              value === null &&
+                setCountryPicker({ name: '', code: '', group: '' });
+              value && setCountryPicker(value);
+            }}
             onInputChange={(event, value) => {
               setCountryPickerInput(value);
             }}
@@ -152,6 +159,10 @@ const FormBuilder = () => {
                     : t('DISTRICTCHOSSE')
                 }
                 variant="outlined"
+                inputProps={{
+                  ...params.inputProps,
+                  autoComplete: 'new-password', // disable autocomplete and autofill
+                }}
               />
             )}
           />
